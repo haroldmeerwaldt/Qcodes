@@ -68,7 +68,7 @@
             
             
               <div class="version">
-                0.22.0+61.g05e8b7ea96
+                0.22.0+63.gfe6e306670
               </div>
             
           
@@ -557,7 +557,7 @@ Output logging : True
 Raw input log  : False
 Timestamping   : True
 State          : active
-Qcodes Logfile : /home/vsts/.qcodes/logs/210204-15534-qcodes.log
+Qcodes Logfile : /home/vsts/.qcodes/logs/210204-14988-qcodes.log
 Activating auto-logging. Current session state plus future input saved.
 Filename       : /home/vsts/.qcodes/logs/command_history.log
 Mode           : append
@@ -565,7 +565,7 @@ Output logging : True
 Raw input log  : False
 Timestamping   : True
 State          : active
-Qcodes Logfile : /home/vsts/.qcodes/logs/210204-15534-qcodes.log
+Qcodes Logfile : /home/vsts/.qcodes/logs/210204-14988-qcodes.log
 </pre></div></div>
 </div>
 <p>In what follows, we shall define some utility functions as well as declare our dummy instruments. We, then, add these instruments to a <code class="docutils literal notranslate"><span class="pre">Station</span></code> object.</p>
@@ -701,7 +701,7 @@ End of experiment
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;qcodes.dataset.measurements.Measurement at 0x7f939efa3a10&gt;
+&lt;qcodes.dataset.measurements.Measurement at 0x7f4a3b2d6950&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -770,8 +770,8 @@ Starting experimental run with id: 34.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;dmm_v1&#39;: {&#39;dmm_v1&#39;: array([ 5.05745804,  2.88523065,  1.6050612 ,  1.10585495,  0.45292145,
-          0.35855094,  0.28491683,  0.15578301,  0.17758533, -0.16811403]),
+{&#39;dmm_v1&#39;: {&#39;dmm_v1&#39;: array([ 4.94890821,  2.8439308 ,  1.55658422,  0.84369471,  0.48371787,
+          0.35953197,  0.2288024 ,  0.02422928, -0.00692228, -0.17932855]),
   &#39;dac_ch1&#39;: array([ 0.        ,  2.77777778,  5.55555556,  8.33333333, 11.11111111,
          13.88888889, 16.66666667, 19.44444444, 22.22222222, 25.        ])}}
 </pre></div></div>
@@ -792,8 +792,8 @@ Starting experimental run with id: 34.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;dmm_v1&#39;: {&#39;dmm_v1&#39;: array([ 5.05745804,  2.88523065,  1.6050612 ,  1.10585495,  0.45292145,
-          0.35855094,  0.28491683,  0.15578301,  0.17758533, -0.16811403]),
+{&#39;dmm_v1&#39;: {&#39;dmm_v1&#39;: array([ 4.94890821,  2.8439308 ,  1.55658422,  0.84369471,  0.48371787,
+          0.35953197,  0.2288024 ,  0.02422928, -0.00692228, -0.17932855]),
   &#39;dac_ch1&#39;: array([ 0.        ,  2.77777778,  5.55555556,  8.33333333, 11.11111111,
          13.88888889, 16.66666667, 19.44444444, 22.22222222, 25.        ])}}
 </pre></div></div>
@@ -862,43 +862,43 @@ Starting experimental run with id: 34.
   <tbody>
     <tr>
       <th>0.000000</th>
-      <td>5.057458</td>
+      <td>4.948908</td>
     </tr>
     <tr>
       <th>2.777778</th>
-      <td>2.885231</td>
+      <td>2.843931</td>
     </tr>
     <tr>
       <th>5.555556</th>
-      <td>1.605061</td>
+      <td>1.556584</td>
     </tr>
     <tr>
       <th>8.333333</th>
-      <td>1.105855</td>
+      <td>0.843695</td>
     </tr>
     <tr>
       <th>11.111111</th>
-      <td>0.452921</td>
+      <td>0.483718</td>
     </tr>
     <tr>
       <th>13.888889</th>
-      <td>0.358551</td>
+      <td>0.359532</td>
     </tr>
     <tr>
       <th>16.666667</th>
-      <td>0.284917</td>
+      <td>0.228802</td>
     </tr>
     <tr>
       <th>19.444444</th>
-      <td>0.155783</td>
+      <td>0.024229</td>
     </tr>
     <tr>
       <th>22.222222</th>
-      <td>0.177585</td>
+      <td>-0.006922</td>
     </tr>
     <tr>
       <th>25.000000</th>
-      <td>-0.168114</td>
+      <td>-0.179329</td>
     </tr>
   </tbody>
 </table>
@@ -922,16 +922,16 @@ Starting experimental run with id: 34.
 <div class="highlight"><pre>
 {&#39;dmm_v1&#39;:              dmm_v1
  dac_ch1
- 0.000000   5.057458
- 2.777778   2.885231
- 5.555556   1.605061
- 8.333333   1.105855
- 11.111111  0.452921
- 13.888889  0.358551
- 16.666667  0.284917
- 19.444444  0.155783
- 22.222222  0.177585
- 25.000000 -0.168114}
+ 0.000000   4.948908
+ 2.777778   2.843931
+ 5.555556   1.556584
+ 8.333333   0.843695
+ 11.111111  0.483718
+ 13.888889  0.359532
+ 16.666667  0.228802
+ 19.444444  0.024229
+ 22.222222 -0.006922
+ 25.000000 -0.179329}
 </pre></div></div>
 </div>
 <p>When exporting a two or higher dimensional datasets as a Pandas DataFrame a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/advanced.html">MultiIndex</a> is used to index the measured parameter based on all the dependencies</p>
@@ -980,43 +980,43 @@ Starting experimental run with id: 34.
     <tr>
       <th rowspan="10" valign="top">-1.0</th>
       <th>-1.000000</th>
-      <td>0.000047</td>
+      <td>0.000088</td>
     </tr>
     <tr>
       <th>-0.989950</th>
-      <td>0.000424</td>
+      <td>-0.000146</td>
     </tr>
     <tr>
       <th>-0.979899</th>
-      <td>0.000234</td>
+      <td>-0.000347</td>
     </tr>
     <tr>
       <th>-0.969849</th>
-      <td>0.000524</td>
+      <td>0.000269</td>
     </tr>
     <tr>
       <th>-0.959799</th>
-      <td>0.000202</td>
+      <td>-0.000725</td>
     </tr>
     <tr>
       <th>-0.949749</th>
-      <td>0.000578</td>
+      <td>0.000171</td>
     </tr>
     <tr>
       <th>-0.939698</th>
-      <td>-0.000024</td>
+      <td>-0.000340</td>
     </tr>
     <tr>
       <th>-0.929648</th>
-      <td>-0.000236</td>
+      <td>0.000447</td>
     </tr>
     <tr>
       <th>-0.919598</th>
-      <td>-0.000478</td>
+      <td>0.000364</td>
     </tr>
     <tr>
       <th>-0.909548</th>
-      <td>0.000633</td>
+      <td>0.000840</td>
     </tr>
   </tbody>
 </table>
@@ -1394,10 +1394,10 @@ Coordinates:
   * dac_ch1  (dac_ch1) float64 -1.0 -0.9899 -0.9799 ... 0.9799 0.9899 1.0
   * dac_ch2  (dac_ch2) float64 -1.0 -0.9899 -0.9799 ... 0.9799 0.9899 1.0
 Data variables:
-    dmm_v2   (dac_ch1, dac_ch2) float64 4.672e-05 0.0004239 ... -0.001136
+    dmm_v2   (dac_ch1, dac_ch2) float64 8.753e-05 -0.000146 ... 0.0007402
 Attributes:
     sample_name:  no sample
-    exp_name:     performing_meas_using_parameters_and_dataset</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-51700725-3a5e-4ee8-98f6-75717a866aef' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-51700725-3a5e-4ee8-98f6-75717a866aef' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>dac_ch1</span>: 200</li><li><span class='xr-has-index'>dac_ch2</span>: 200</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-4f8998c3-4bd9-4e2b-88d2-b42233673a75' class='xr-section-summary-in' type='checkbox'  checked><label for='section-4f8998c3-4bd9-4e2b-88d2-b42233673a75' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>dac_ch1</span></div><div class='xr-var-dims'>(dac_ch1)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-1.0 -0.9899 -0.9799 ... 0.9899 1.0</div><input id='attrs-6a4e431a-da9a-4852-8292-84c6829c7017' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6a4e431a-da9a-4852-8292-84c6829c7017' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e909ab0f-6064-48b0-8c08-7677e6fa7346' class='xr-var-data-in' type='checkbox'><label for='data-e909ab0f-6064-48b0-8c08-7677e6fa7346' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>dac_ch1</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>Gate ch1</dd><dt><span>unit :</span></dt><dd>V</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[]</dd></dl></div><div class='xr-var-data'><pre>array([-1.      , -0.98995 , -0.979899, -0.969849, -0.959799, -0.949749,
+    exp_name:     performing_meas_using_parameters_and_dataset</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-6bd2bbee-b8d7-4651-912c-023cd06b34b9' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-6bd2bbee-b8d7-4651-912c-023cd06b34b9' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>dac_ch1</span>: 200</li><li><span class='xr-has-index'>dac_ch2</span>: 200</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-9942dac6-8b93-46a4-91e5-e7a2e02fa2f1' class='xr-section-summary-in' type='checkbox'  checked><label for='section-9942dac6-8b93-46a4-91e5-e7a2e02fa2f1' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>dac_ch1</span></div><div class='xr-var-dims'>(dac_ch1)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-1.0 -0.9899 -0.9799 ... 0.9899 1.0</div><input id='attrs-01c8558b-3f2e-498f-ac31-f70cc05f8b9f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-01c8558b-3f2e-498f-ac31-f70cc05f8b9f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-674c7c1a-83f0-4f02-8bd1-22ba4ff40bf1' class='xr-var-data-in' type='checkbox'><label for='data-674c7c1a-83f0-4f02-8bd1-22ba4ff40bf1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>dac_ch1</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>Gate ch1</dd><dt><span>unit :</span></dt><dd>V</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[]</dd></dl></div><div class='xr-var-data'><pre>array([-1.      , -0.98995 , -0.979899, -0.969849, -0.959799, -0.949749,
        -0.939698, -0.929648, -0.919598, -0.909548, -0.899497, -0.889447,
        -0.879397, -0.869347, -0.859296, -0.849246, -0.839196, -0.829146,
        -0.819095, -0.809045, -0.798995, -0.788945, -0.778894, -0.768844,
@@ -1430,7 +1430,7 @@ Attributes:
         0.809045,  0.819095,  0.829146,  0.839196,  0.849246,  0.859296,
         0.869347,  0.879397,  0.889447,  0.899497,  0.909548,  0.919598,
         0.929648,  0.939698,  0.949749,  0.959799,  0.969849,  0.979899,
-        0.98995 ,  1.      ])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>dac_ch2</span></div><div class='xr-var-dims'>(dac_ch2)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-1.0 -0.9899 -0.9799 ... 0.9899 1.0</div><input id='attrs-ba2c0c02-6b17-4268-8729-ce18cfcb1238' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ba2c0c02-6b17-4268-8729-ce18cfcb1238' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3ed85d00-bb37-4343-b873-c48726090b33' class='xr-var-data-in' type='checkbox'><label for='data-3ed85d00-bb37-4343-b873-c48726090b33' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>dac_ch2</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>Gate ch2</dd><dt><span>unit :</span></dt><dd>V</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[]</dd></dl></div><div class='xr-var-data'><pre>array([-1.      , -0.98995 , -0.979899, -0.969849, -0.959799, -0.949749,
+        0.98995 ,  1.      ])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>dac_ch2</span></div><div class='xr-var-dims'>(dac_ch2)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-1.0 -0.9899 -0.9799 ... 0.9899 1.0</div><input id='attrs-20125e1b-aa34-4a75-b368-8463466fb51c' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-20125e1b-aa34-4a75-b368-8463466fb51c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a46e06fa-221c-4629-9b89-4a3a68b98d9e' class='xr-var-data-in' type='checkbox'><label for='data-a46e06fa-221c-4629-9b89-4a3a68b98d9e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>dac_ch2</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>Gate ch2</dd><dt><span>unit :</span></dt><dd>V</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[]</dd></dl></div><div class='xr-var-data'><pre>array([-1.      , -0.98995 , -0.979899, -0.969849, -0.959799, -0.949749,
        -0.939698, -0.929648, -0.919598, -0.909548, -0.899497, -0.889447,
        -0.879397, -0.869347, -0.859296, -0.849246, -0.839196, -0.829146,
        -0.819095, -0.809045, -0.798995, -0.788945, -0.778894, -0.768844,
@@ -1463,19 +1463,19 @@ Attributes:
         0.809045,  0.819095,  0.829146,  0.839196,  0.849246,  0.859296,
         0.869347,  0.879397,  0.889447,  0.899497,  0.909548,  0.919598,
         0.929648,  0.939698,  0.949749,  0.959799,  0.969849,  0.979899,
-        0.98995 ,  1.      ])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-b8b7abf9-c447-4532-9f96-c71611f6ddf0' class='xr-section-summary-in' type='checkbox'  checked><label for='section-b8b7abf9-c447-4532-9f96-c71611f6ddf0' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>dmm_v2</span></div><div class='xr-var-dims'>(dac_ch1, dac_ch2)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>4.672e-05 0.0004239 ... -0.001136</div><input id='attrs-1cef282f-70ff-486f-ac33-4655f9744512' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1cef282f-70ff-486f-ac33-4655f9744512' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b7403504-b377-4cc7-a58e-ebec6116da73' class='xr-var-data-in' type='checkbox'><label for='data-b7403504-b377-4cc7-a58e-ebec6116da73' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>dmm_v2</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>Gate v2</dd><dt><span>unit :</span></dt><dd>V</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[&#x27;dac_ch1&#x27;, &#x27;dac_ch2&#x27;]</dd></dl></div><div class='xr-var-data'><pre>array([[ 4.67237374e-05,  4.23936296e-04,  2.33548447e-04, ...,
-        -1.50207330e-04,  7.01866618e-05, -7.57557225e-04],
-       [ 1.93847395e-04, -1.95514275e-04,  3.10429001e-04, ...,
-         1.25825210e-04, -3.64441652e-04, -2.99218235e-04],
-       [-1.93170153e-04,  6.52478109e-04, -9.78975507e-05, ...,
-         8.24626560e-04, -2.10074965e-04,  6.41672455e-05],
+        0.98995 ,  1.      ])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-e928d59e-3f19-43a2-8cca-27825299e25d' class='xr-section-summary-in' type='checkbox'  checked><label for='section-e928d59e-3f19-43a2-8cca-27825299e25d' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>dmm_v2</span></div><div class='xr-var-dims'>(dac_ch1, dac_ch2)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>8.753e-05 -0.000146 ... 0.0007402</div><input id='attrs-b5657cd6-dcc9-41d2-89a6-6eb9cd8fff44' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b5657cd6-dcc9-41d2-89a6-6eb9cd8fff44' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-dcb48c30-9106-4ff9-8207-abaab3a2c768' class='xr-var-data-in' type='checkbox'><label for='data-dcb48c30-9106-4ff9-8207-abaab3a2c768' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>dmm_v2</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>Gate v2</dd><dt><span>unit :</span></dt><dd>V</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[&#x27;dac_ch1&#x27;, &#x27;dac_ch2&#x27;]</dd></dl></div><div class='xr-var-data'><pre>array([[ 8.75269854e-05, -1.45966287e-04, -3.46559225e-04, ...,
+        -6.88774643e-04,  4.67224529e-04, -2.04341670e-04],
+       [ 1.72880305e-04, -4.66355247e-04,  9.46775245e-05, ...,
+         3.65540361e-04,  8.34224091e-05, -9.38808302e-06],
+       [-1.19293842e-04, -5.49711178e-04,  2.50767730e-04, ...,
+        -1.87899408e-04, -2.42431477e-04,  2.78990880e-04],
        ...,
-       [-3.68464392e-04,  1.87643458e-04, -1.29954065e-04, ...,
-        -1.83020972e-04,  6.17303403e-04,  3.93307734e-04],
-       [ 5.31041886e-04,  2.19778699e-04,  2.26468954e-04, ...,
-        -4.00479065e-04, -4.57695573e-04,  4.78651140e-04],
-       [ 5.26169606e-04, -3.90229365e-04, -1.63362263e-04, ...,
-         1.91452185e-04, -2.55835170e-04, -1.13634821e-03]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-0a9d0e4d-6647-4404-8495-087197440f6b' class='xr-section-summary-in' type='checkbox'  checked><label for='section-0a9d0e4d-6647-4404-8495-087197440f6b' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>sample_name :</span></dt><dd>no sample</dd><dt><span>exp_name :</span></dt><dd>performing_meas_using_parameters_and_dataset</dd></dl></div></li></ul></div></div></div>
+       [ 1.15501799e-03, -6.34503545e-04,  6.03163092e-04, ...,
+        -4.96144687e-04,  7.30302487e-04, -3.99239398e-04],
+       [-5.31020194e-05,  3.55342324e-04,  4.53010903e-05, ...,
+        -1.91314085e-04, -1.38935059e-04,  4.23395678e-04],
+       [-1.94487233e-04,  9.28007813e-04, -2.52974279e-05, ...,
+        -4.68018092e-04,  1.97312932e-04,  7.40241355e-04]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-d26110dc-e709-4301-9c10-0ceadfdeeaaf' class='xr-section-summary-in' type='checkbox'  checked><label for='section-d26110dc-e709-4301-9c10-0ceadfdeeaaf' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>sample_name :</span></dt><dd>no sample</dd><dt><span>exp_name :</span></dt><dd>performing_meas_using_parameters_and_dataset</dd></dl></div></li></ul></div></div></div>
 </div>
 <p>Note, however, that XArray is only suited for data that is on a rectangular grid with few or no missing values. If the data does not lie on a grid, all the measured data points will have an unique combination of the two dependent parameters. When exporting to XArray, NaN’s will therefore replace all the missing combinations of <code class="docutils literal notranslate"><span class="pre">dac_ch1</span></code> and <code class="docutils literal notranslate"><span class="pre">dac_ch2</span></code> and the data is unlikely to be useful in this format.</p>
 <p>For more details about using Pandas and XArray see <a class="reference internal" href="Working-With-Pandas-and-XArray.html"><span class="doc">Working With Pandas and XArray</span></a></p>
@@ -1547,7 +1547,7 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Dataset GUID is: aaaaaaaa-0000-0000-0000-01776c1577fb
+Dataset GUID is: aaaaaaaa-0000-0000-0000-01776ce2d720
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -1879,8 +1879,8 @@ Starting experimental run with id: 38.
 <div class="highlight"><pre>
 ([&lt;AxesSubplot:title={&#39;center&#39;:&#39;Run #38, Experiment performing_meas_using_parameters_and_dataset (no sample)&#39;}, xlabel=&#39;this setpoint (this setpointunit)&#39;, ylabel=&#39;that setpoint (that setpointunit)&#39;&gt;,
   &lt;AxesSubplot:title={&#39;center&#39;:&#39;Run #38, Experiment performing_meas_using_parameters_and_dataset (no sample)&#39;}, xlabel=&#39;this setpoint (this setpointunit)&#39;, ylabel=&#39;that setpoint (that setpointunit)&#39;&gt;],
- [&lt;matplotlib.colorbar.Colorbar at 0x7f939c407890&gt;,
-  &lt;matplotlib.colorbar.Colorbar at 0x7f939c37cc10&gt;])
+ [&lt;matplotlib.colorbar.Colorbar at 0x7f4a383e4a90&gt;,
+  &lt;matplotlib.colorbar.Colorbar at 0x7f4a3884a2d0&gt;])
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -2421,15 +2421,15 @@ Data variables:
     MyDummy_ChanA_this                                   (MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint, MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint) float64 ...
 Attributes:
     sample_name:  no sample
-    exp_name:     performing_meas_using_parameters_and_dataset</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-f236119c-cd65-4d6e-bd29-aa40cc5dec17' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-f236119c-cd65-4d6e-bd29-aa40cc5dec17' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint</span>: 3</li><li><span class='xr-has-index'>MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint</span>: 5</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-61364d8c-3976-43f7-853d-363105ac042e' class='xr-section-summary-in' type='checkbox'  checked><label for='section-61364d8c-3976-43f7-853d-363105ac042e' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint</span></div><div class='xr-var-dims'>(MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>5.0 6.0 7.0 8.0 9.0</div><input id='attrs-c57d7777-f529-4d92-b468-196e55338688' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c57d7777-f529-4d92-b468-196e55338688' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-94ba53ec-2e18-496f-897c-84babf10b16d' class='xr-var-data-in' type='checkbox'><label for='data-94ba53ec-2e18-496f-897c-84babf10b16d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>this setpoint</dd><dt><span>unit :</span></dt><dd>this setpointunit</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[]</dd></dl></div><div class='xr-var-data'><pre>array([5., 6., 7., 8., 9.])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint</span></div><div class='xr-var-dims'>(MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>9.0 10.0 11.0</div><input id='attrs-b3baf657-0a98-483d-b2e2-db06b7789321' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b3baf657-0a98-483d-b2e2-db06b7789321' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ca4f2975-5061-4299-bd87-5de7fdc2022b' class='xr-var-data-in' type='checkbox'><label for='data-ca4f2975-5061-4299-bd87-5de7fdc2022b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>that setpoint</dd><dt><span>unit :</span></dt><dd>that setpointunit</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[]</dd></dl></div><div class='xr-var-data'><pre>array([ 9., 10., 11.])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-83affdbf-0816-4d57-ad47-3f3dace12bc4' class='xr-section-summary-in' type='checkbox'  checked><label for='section-83affdbf-0816-4d57-ad47-3f3dace12bc4' class='xr-section-summary' >Data variables: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>MyDummy_ChanA_that</span></div><div class='xr-var-dims'>(MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint, MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>1.0 1.0 1.0 1.0 ... 1.0 1.0 1.0 1.0</div><input id='attrs-429835f6-aff4-43b0-925d-bf37b56104ef' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-429835f6-aff4-43b0-925d-bf37b56104ef' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2af896b9-0d5c-4769-baa3-654362d93b74' class='xr-var-data-in' type='checkbox'><label for='data-2af896b9-0d5c-4769-baa3-654362d93b74' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>MyDummy_ChanA_that</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>that label</dd><dt><span>unit :</span></dt><dd>that unit</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[&#x27;MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint&#x27;, &#x27;MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint&#x27;]</dd></dl></div><div class='xr-var-data'><pre>array([[1., 1., 1.],
+    exp_name:     performing_meas_using_parameters_and_dataset</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-dc28c0bc-f3c5-4293-936d-3f8a1b3572ce' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-dc28c0bc-f3c5-4293-936d-3f8a1b3572ce' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint</span>: 3</li><li><span class='xr-has-index'>MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint</span>: 5</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-0b545998-15cf-4797-83b7-ca2e411530cc' class='xr-section-summary-in' type='checkbox'  checked><label for='section-0b545998-15cf-4797-83b7-ca2e411530cc' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint</span></div><div class='xr-var-dims'>(MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>5.0 6.0 7.0 8.0 9.0</div><input id='attrs-84ee90bd-12e0-4740-8b66-b51a10e3a229' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-84ee90bd-12e0-4740-8b66-b51a10e3a229' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d2a69490-e625-493c-a4dc-ce528fef9fc0' class='xr-var-data-in' type='checkbox'><label for='data-d2a69490-e625-493c-a4dc-ce528fef9fc0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>this setpoint</dd><dt><span>unit :</span></dt><dd>this setpointunit</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[]</dd></dl></div><div class='xr-var-data'><pre>array([5., 6., 7., 8., 9.])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint</span></div><div class='xr-var-dims'>(MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>9.0 10.0 11.0</div><input id='attrs-1a4769a0-40ac-486a-b5dc-9c395622695a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1a4769a0-40ac-486a-b5dc-9c395622695a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-00eb6691-bdb3-44a6-9ae4-dbc9276a20f6' class='xr-var-data-in' type='checkbox'><label for='data-00eb6691-bdb3-44a6-9ae4-dbc9276a20f6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>that setpoint</dd><dt><span>unit :</span></dt><dd>that setpointunit</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[]</dd></dl></div><div class='xr-var-data'><pre>array([ 9., 10., 11.])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-de26df28-68b4-4979-bb01-89cbf14b2da2' class='xr-section-summary-in' type='checkbox'  checked><label for='section-de26df28-68b4-4979-bb01-89cbf14b2da2' class='xr-section-summary' >Data variables: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>MyDummy_ChanA_that</span></div><div class='xr-var-dims'>(MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint, MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>1.0 1.0 1.0 1.0 ... 1.0 1.0 1.0 1.0</div><input id='attrs-150b6187-9a73-4e47-8b22-a88665828d5f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-150b6187-9a73-4e47-8b22-a88665828d5f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-70b97bc2-7b07-4272-87e2-5811224b2bcf' class='xr-var-data-in' type='checkbox'><label for='data-70b97bc2-7b07-4272-87e2-5811224b2bcf' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>MyDummy_ChanA_that</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>that label</dd><dt><span>unit :</span></dt><dd>that unit</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[&#x27;MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint&#x27;, &#x27;MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint&#x27;]</dd></dl></div><div class='xr-var-data'><pre>array([[1., 1., 1.],
        [1., 1., 1.],
        [1., 1., 1.],
        [1., 1., 1.],
-       [1., 1., 1.]])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>MyDummy_ChanA_this</span></div><div class='xr-var-dims'>(MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint, MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 0.0 0.0 0.0 ... 0.0 0.0 0.0 0.0</div><input id='attrs-d8f2ef72-9d6d-4724-8dbc-09c4c599ae7b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d8f2ef72-9d6d-4724-8dbc-09c4c599ae7b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c15b88a2-4868-4930-8484-013584a0c579' class='xr-var-data-in' type='checkbox'><label for='data-c15b88a2-4868-4930-8484-013584a0c579' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>MyDummy_ChanA_this</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>this label</dd><dt><span>unit :</span></dt><dd>this unit</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[&#x27;MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint&#x27;, &#x27;MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint&#x27;]</dd></dl></div><div class='xr-var-data'><pre>array([[0., 0., 0.],
+       [1., 1., 1.]])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>MyDummy_ChanA_this</span></div><div class='xr-var-dims'>(MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint, MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 0.0 0.0 0.0 ... 0.0 0.0 0.0 0.0</div><input id='attrs-3824b8a1-2feb-4143-8ba8-9974c2f6464b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-3824b8a1-2feb-4143-8ba8-9974c2f6464b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-bc26c722-b99d-4376-958d-349f4922ef96' class='xr-var-data-in' type='checkbox'><label for='data-bc26c722-b99d-4376-958d-349f4922ef96' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>MyDummy_ChanA_this</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>this label</dd><dt><span>unit :</span></dt><dd>this unit</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[&#x27;MyDummy_ChanA_multi_2d_setpoint_param_this_setpoint&#x27;, &#x27;MyDummy_ChanA_multi_2d_setpoint_param_that_setpoint&#x27;]</dd></dl></div><div class='xr-var-data'><pre>array([[0., 0., 0.],
        [0., 0., 0.],
        [0., 0., 0.],
        [0., 0., 0.],
-       [0., 0., 0.]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-873734e7-6a79-4c4d-98cb-d00dceb07b1d' class='xr-section-summary-in' type='checkbox'  checked><label for='section-873734e7-6a79-4c4d-98cb-d00dceb07b1d' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>sample_name :</span></dt><dd>no sample</dd><dt><span>exp_name :</span></dt><dd>performing_meas_using_parameters_and_dataset</dd></dl></div></li></ul></div></div></div>
+       [0., 0., 0.]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-4997a91f-84a3-4096-b902-8d3d7738b8bb' class='xr-section-summary-in' type='checkbox'  checked><label for='section-4997a91f-84a3-4096-b902-8d3d7738b8bb' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>sample_name :</span></dt><dd>no sample</dd><dt><span>exp_name :</span></dt><dd>performing_meas_using_parameters_and_dataset</dd></dl></div></li></ul></div></div></div>
 </div>
 </div>
 <div class="section" id="Avoiding-verbosity-of-the-Measurement-context-manager-for-simple-measurements">
@@ -2573,7 +2573,7 @@ Starting experimental run with id: 40.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;qcodes.dataset.measurements.Measurement at 0x7f939b96bb50&gt;
+&lt;qcodes.dataset.measurements.Measurement at 0x7f4a38678c50&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -2693,7 +2693,7 @@ Starting experimental run with id: 41.
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Starting experimental run with id: 42.
-130 46 0.2508050476482915
+130 46 0.2506108897075833
 ----------
 </pre></div></div>
 </div>
@@ -2711,7 +2711,7 @@ Starting experimental run with id: 42.
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-2021-02-04 08:08:35,393 ¦ py.warnings ¦ WARNING ¦ warnings ¦ _showwarnmsg ¦ 110 ¦ /home/vsts/work/1/s/qcodes/dataset/data_export.py:172: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray.
+2021-02-04 11:53:00,406 ¦ py.warnings ¦ WARNING ¦ warnings ¦ _showwarnmsg ¦ 110 ¦ /home/vsts/work/1/s/qcodes/dataset/data_export.py:172: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray.
   return np.array(rows)
 
 </pre></div></div>
@@ -2822,54 +2822,54 @@ Starting experimental run with id: 43.
   </thead>
   <tbody>
     <tr>
-      <th>-0.290998</th>
-      <th>-0.527493</th>
-      <td>0.004459</td>
+      <th>-0.157922</th>
+      <th>0.419782</th>
+      <td>0.452278</td>
     </tr>
     <tr>
-      <th>-0.351415</th>
-      <th>-0.491389</th>
-      <td>0.004761</td>
+      <th>-0.857910</th>
+      <th>0.119947</th>
+      <td>0.001122</td>
     </tr>
     <tr>
-      <th>-0.878107</th>
-      <th>0.445031</th>
-      <td>0.000321</td>
+      <th>-0.779897</th>
+      <th>0.604103</th>
+      <td>0.000679</td>
     </tr>
     <tr>
-      <th>0.173843</th>
-      <th>-0.318314</th>
-      <td>0.126940</td>
+      <th>0.969498</th>
+      <th>0.178887</th>
+      <td>0.002711</td>
     </tr>
     <tr>
-      <th>-0.009566</th>
-      <th>0.904554</th>
-      <td>0.018872</td>
+      <th>-0.420777</th>
+      <th>0.619390</th>
+      <td>0.032103</td>
     </tr>
     <tr>
-      <th>0.236311</th>
-      <th>0.646238</th>
-      <td>0.197900</td>
+      <th>-0.272670</th>
+      <th>-0.163418</th>
+      <td>0.129876</td>
     </tr>
     <tr>
-      <th>0.674970</th>
-      <th>0.797995</th>
-      <td>0.003896</td>
+      <th>-0.600483</th>
+      <th>-0.552999</th>
+      <td>0.000307</td>
     </tr>
     <tr>
-      <th>-0.081246</th>
-      <th>0.437088</th>
-      <td>0.557311</td>
+      <th>-0.150003</th>
+      <th>-0.016292</th>
+      <td>0.472780</td>
     </tr>
     <tr>
-      <th>-0.207341</th>
-      <th>-0.426706</th>
-      <td>0.023382</td>
+      <th>-0.955217</th>
+      <th>-0.748782</th>
+      <td>-0.000864</td>
     </tr>
     <tr>
-      <th>-0.362308</th>
-      <th>-0.595261</th>
-      <td>0.001041</td>
+      <th>0.419645</th>
+      <th>-0.716659</th>
+      <td>0.000459</td>
     </tr>
   </tbody>
 </table>
@@ -3244,19 +3244,19 @@ dl.xr-attrs {
 </style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
 Dimensions:  (dac_ch1: 5000, dac_ch2: 5000)
 Coordinates:
-  * dac_ch1  (dac_ch1) float64 -0.9999 -0.9999 -0.9998 ... 0.9996 0.9997 0.9998
-  * dac_ch2  (dac_ch2) float64 -1.0 -0.9999 -0.9996 ... 0.999 0.9999 0.9999
+  * dac_ch1  (dac_ch1) float64 -0.9998 -0.9993 -0.999 ... 0.9992 0.9997 0.9999
+  * dac_ch2  (dac_ch2) float64 -0.9998 -0.9994 -0.9993 ... 0.9993 0.9996 0.9996
 Data variables:
     dmm_v2   (dac_ch1, dac_ch2) float64 nan nan nan nan nan ... nan nan nan nan
 Attributes:
     sample_name:  no sample
-    exp_name:     performing_meas_using_parameters_and_dataset</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-ec91b4fb-18e0-4877-9394-07309d5b99ee' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-ec91b4fb-18e0-4877-9394-07309d5b99ee' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>dac_ch1</span>: 5000</li><li><span class='xr-has-index'>dac_ch2</span>: 5000</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-986f160e-4aba-47ce-8ed5-6a176c721ba0' class='xr-section-summary-in' type='checkbox'  checked><label for='section-986f160e-4aba-47ce-8ed5-6a176c721ba0' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>dac_ch1</span></div><div class='xr-var-dims'>(dac_ch1)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-0.9999 -0.9999 ... 0.9997 0.9998</div><input id='attrs-92a2c4c5-b626-497f-9188-d5fb189862e2' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-92a2c4c5-b626-497f-9188-d5fb189862e2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f9488e91-f634-4b9e-8131-5a5ad07d906f' class='xr-var-data-in' type='checkbox'><label for='data-f9488e91-f634-4b9e-8131-5a5ad07d906f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>dac_ch1</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>Gate ch1</dd><dt><span>unit :</span></dt><dd>V</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[]</dd></dl></div><div class='xr-var-data'><pre>array([-0.999938, -0.999868, -0.999798, ...,  0.999583,  0.999668,  0.999817])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>dac_ch2</span></div><div class='xr-var-dims'>(dac_ch2)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-1.0 -0.9999 ... 0.9999 0.9999</div><input id='attrs-499d5fcd-8740-442f-b28d-31a54191c07a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-499d5fcd-8740-442f-b28d-31a54191c07a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1c6b4a43-1884-47e1-8855-96bb14334da4' class='xr-var-data-in' type='checkbox'><label for='data-1c6b4a43-1884-47e1-8855-96bb14334da4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>dac_ch2</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>Gate ch2</dd><dt><span>unit :</span></dt><dd>V</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[]</dd></dl></div><div class='xr-var-data'><pre>array([-0.999985, -0.999926, -0.999586, ...,  0.998962,  0.999893,  0.999915])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-d61a385a-621d-4e7a-902a-a1566cbe4807' class='xr-section-summary-in' type='checkbox'  checked><label for='section-d61a385a-621d-4e7a-902a-a1566cbe4807' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>dmm_v2</span></div><div class='xr-var-dims'>(dac_ch1, dac_ch2)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>nan nan nan nan ... nan nan nan nan</div><input id='attrs-387456e2-f416-4471-99c1-ec330deb9bfd' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-387456e2-f416-4471-99c1-ec330deb9bfd' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-cd4b0b86-6558-4376-9163-b3fddd706404' class='xr-var-data-in' type='checkbox'><label for='data-cd4b0b86-6558-4376-9163-b3fddd706404' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>dmm_v2</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>Gate v2</dd><dt><span>unit :</span></dt><dd>V</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[&#x27;dac_ch1&#x27;, &#x27;dac_ch2&#x27;]</dd></dl></div><div class='xr-var-data'><pre>array([[nan, nan, nan, ..., nan, nan, nan],
+    exp_name:     performing_meas_using_parameters_and_dataset</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-6d94521e-7bb2-4f26-ab95-1e06b7c5e107' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-6d94521e-7bb2-4f26-ab95-1e06b7c5e107' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>dac_ch1</span>: 5000</li><li><span class='xr-has-index'>dac_ch2</span>: 5000</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-a93889cf-2a38-4a63-9ba9-971d096528be' class='xr-section-summary-in' type='checkbox'  checked><label for='section-a93889cf-2a38-4a63-9ba9-971d096528be' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>dac_ch1</span></div><div class='xr-var-dims'>(dac_ch1)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-0.9998 -0.9993 ... 0.9997 0.9999</div><input id='attrs-14430c55-66f6-4dbc-a32c-7de7b4419082' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-14430c55-66f6-4dbc-a32c-7de7b4419082' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0bc7d9d6-222b-4cba-826c-4cb8bcf0d3be' class='xr-var-data-in' type='checkbox'><label for='data-0bc7d9d6-222b-4cba-826c-4cb8bcf0d3be' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>dac_ch1</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>Gate ch1</dd><dt><span>unit :</span></dt><dd>V</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[]</dd></dl></div><div class='xr-var-data'><pre>array([-0.99981 , -0.999253, -0.998957, ...,  0.999227,  0.999734,  0.999945])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>dac_ch2</span></div><div class='xr-var-dims'>(dac_ch2)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-0.9998 -0.9994 ... 0.9996 0.9996</div><input id='attrs-9f2e75f3-fc9f-450f-88b8-a99c105ee88c' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9f2e75f3-fc9f-450f-88b8-a99c105ee88c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f05ca462-5482-4adc-a93b-49114147f9e7' class='xr-var-data-in' type='checkbox'><label for='data-f05ca462-5482-4adc-a93b-49114147f9e7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>dac_ch2</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>Gate ch2</dd><dt><span>unit :</span></dt><dd>V</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[]</dd></dl></div><div class='xr-var-data'><pre>array([-0.999758, -0.999424, -0.99928 , ...,  0.999316,  0.999563,  0.999622])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-3b29656f-48fe-4118-adac-e9ba6488ac2d' class='xr-section-summary-in' type='checkbox'  checked><label for='section-3b29656f-48fe-4118-adac-e9ba6488ac2d' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>dmm_v2</span></div><div class='xr-var-dims'>(dac_ch1, dac_ch2)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>nan nan nan nan ... nan nan nan nan</div><input id='attrs-1bd01fb0-4b16-440b-982a-bda19be1885d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1bd01fb0-4b16-440b-982a-bda19be1885d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-81f43c7d-3ef7-46fd-9c02-2e1f6e627fbc' class='xr-var-data-in' type='checkbox'><label for='data-81f43c7d-3ef7-46fd-9c02-2e1f6e627fbc' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>dmm_v2</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>Gate v2</dd><dt><span>unit :</span></dt><dd>V</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[&#x27;dac_ch1&#x27;, &#x27;dac_ch2&#x27;]</dd></dl></div><div class='xr-var-data'><pre>array([[nan, nan, nan, ..., nan, nan, nan],
        [nan, nan, nan, ..., nan, nan, nan],
        [nan, nan, nan, ..., nan, nan, nan],
        ...,
        [nan, nan, nan, ..., nan, nan, nan],
        [nan, nan, nan, ..., nan, nan, nan],
-       [nan, nan, nan, ..., nan, nan, nan]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-911176c9-ddd7-4373-8046-28f49dd38a31' class='xr-section-summary-in' type='checkbox'  checked><label for='section-911176c9-ddd7-4373-8046-28f49dd38a31' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>sample_name :</span></dt><dd>no sample</dd><dt><span>exp_name :</span></dt><dd>performing_meas_using_parameters_and_dataset</dd></dl></div></li></ul></div></div></div>
+       [nan, nan, nan, ..., nan, nan, nan]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-9a1b5fbd-969a-4067-be12-b17d7878d326' class='xr-section-summary-in' type='checkbox'  checked><label for='section-9a1b5fbd-969a-4067-be12-b17d7878d326' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>sample_name :</span></dt><dd>no sample</dd><dt><span>exp_name :</span></dt><dd>performing_meas_using_parameters_and_dataset</dd></dl></div></li></ul></div></div></div>
 </div>
 </div>
 <div class="section" id="Optimiser">
@@ -3326,16 +3326,16 @@ Starting experimental run with id: 44.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
- final_simplex: (array([[0.09521333, 0.19885092],
-       [0.09521333, 0.19885092],
-       [0.09521333, 0.19885092]]), array([-1.13433742, -1.13281874, -1.13235112]))
-           fun: -1.1343374231216128
+ final_simplex: (array([[0.10215402, 0.20216347],
+       [0.10215402, 0.20216347],
+       [0.10215402, 0.20216347]]), array([-1.13460716, -1.13324884, -1.13249099]))
+           fun: -1.1346071574325864
        message: &#39;Maximum number of function evaluations has been exceeded.&#39;
-          nfev: 402
-           nit: 163
+          nfev: 400
+           nit: 152
         status: 1
        success: False
-             x: array([0.09521333, 0.19885092])
+             x: array([0.10215402, 0.20216347])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -3352,7 +3352,7 @@ Starting experimental run with id: 44.
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-2021-02-04 08:08:37,155 ¦ py.warnings ¦ WARNING ¦ warnings ¦ _showwarnmsg ¦ 110 ¦ /home/vsts/work/1/s/qcodes/dataset/data_export.py:172: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray.
+2021-02-04 11:53:02,425 ¦ py.warnings ¦ WARNING ¦ warnings ¦ _showwarnmsg ¦ 110 ¦ /home/vsts/work/1/s/qcodes/dataset/data_export.py:172: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray.
   return np.array(rows)
 
 </pre></div></div>
@@ -3409,18 +3409,18 @@ Starting experimental run with id: 44.
 <div class="highlight"><pre>
 Starting experimental run with id: 45.
 Added points to measurement, step 0.
-The run now holds 2 rows
-Added points to measurement, step 1.
-The run now holds 3 rows
-Added points to measurement, step 2.
+The run now holds 2 rowsAdded points to measurement, step 1.
+
+Added points to measurement, step 2.The run now holds 3 rows
+
 The run now holds 4 rows
 Added points to measurement, step 3.
 The run now holds 5 rows
 Added points to measurement, step 4.
-The run now holds 6 rows
-Added points to measurement, step 5.
-The run now holds 7 rows
+The run now holds 6 rowsAdded points to measurement, step 5.
+
 Added points to measurement, step 6.
+The run now holds 7 rows
 The run now holds 7 rows
 The run now holds 7 rows
 </pre></div></div>
@@ -3478,19 +3478,19 @@ Added points to measurement, step 2.
 First parameter value list: [0, 1, 2]
 Added points to measurement, step 3.
 First parameter value list: [0, 1, 2]
-The run now holds 5 rows
+The run now holds 4 rows
 Added points to measurement, step 4.
 First parameter value list: [0, 1, 2, 3, 4]
 Added points to measurement, step 5.
 First parameter value list: [0, 1, 2, 3, 4]
-The run now holds 7 rowsAdded points to measurement, step 6.
-First parameter value list: [0, 1, 2, 3, 4]
-
+The run now holds 7 rows
+Added points to measurement, step 6.
+First parameter value list: [0, 1, 2, 3, 4, 5, 6]
 Added points to measurement, step 7.
 First parameter value list: [0, 1, 2, 3, 4, 5, 6]
+The run now holds 9 rows
 Added points to measurement, step 8.
 First parameter value list: [0, 1, 2, 3, 4, 5, 6, 7, 8]
-The run now holds 9 rows
 Added points to measurement, step 9.
 First parameter value list: [0, 1, 2, 3, 4, 5, 6, 7, 8]
 The run now holds 10 rows
