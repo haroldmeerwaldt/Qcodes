@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.22.0+92.g80179e638f
+                0.22.0+136.g6580e92f09
               </div>
             
           
@@ -619,7 +619,8 @@
             <span class="n">parent_datasets</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="p">(),</span>
             <span class="n">extra_log_info</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
             <span class="n">write_in_background</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-            <span class="n">shapes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Shapes</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">shapes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Shapes</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">in_memory_cache</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">write_period</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_calculate_write_period</span><span class="p">(</span><span class="n">write_in_background</span><span class="p">,</span>
                                                          <span class="n">write_period</span><span class="p">)</span>
@@ -639,6 +640,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_parent_datasets</span> <span class="o">=</span> <span class="n">parent_datasets</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_extra_log_info</span> <span class="o">=</span> <span class="n">extra_log_info</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_write_in_background</span> <span class="o">=</span> <span class="n">write_in_background</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_in_memory_cache</span> <span class="o">=</span> <span class="n">in_memory_cache</span>
 
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">_calculate_write_period</span><span class="p">(</span>
@@ -668,10 +670,15 @@
         <span class="c1"># next set up the &quot;datasaver&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">ds</span> <span class="o">=</span> <span class="n">qc</span><span class="o">.</span><span class="n">new_data_set</span><span class="p">(</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment</span><span class="o">.</span><span class="n">exp_id</span><span class="p">,</span> <span class="n">conn</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">experiment</span><span class="o">.</span><span class="n">conn</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment</span><span class="o">.</span><span class="n">exp_id</span><span class="p">,</span>
+                <span class="n">conn</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">experiment</span><span class="o">.</span><span class="n">conn</span><span class="p">,</span>
+                <span class="n">in_memory_cache</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_in_memory_cache</span>
             <span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">ds</span> <span class="o">=</span> <span class="n">qc</span><span class="o">.</span><span class="n">new_data_set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ds</span> <span class="o">=</span> <span class="n">qc</span><span class="o">.</span><span class="n">new_data_set</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                <span class="n">in_memory_cache</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_in_memory_cache</span>
+            <span class="p">)</span>
 
         <span class="c1"># .. and give the dataset a snapshot as metadata</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">station</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -1271,7 +1278,8 @@
                                              <span class="n">shapes</span><span class="o">=</span><span class="n">shapes</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_shapes</span> <span class="o">=</span> <span class="n">shapes</span></div>
 
-<div class="viewcode-block" id="Measurement.run"><a class="viewcode-back" href="../../../api/dataset/measurements.html#qcodes.dataset.measurements.Measurement.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">write_in_background</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Runner</span><span class="p">:</span>
+<div class="viewcode-block" id="Measurement.run"><a class="viewcode-back" href="../../../api/dataset/measurements.html#qcodes.dataset.measurements.Measurement.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">write_in_background</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">in_memory_cache</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Runner</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the context manager for the experimental run</span>
 
@@ -1282,6 +1290,8 @@
 <span class="sd">                main thread that is executing the context manager.</span>
 <span class="sd">                By default the setting for write in background will be</span>
 <span class="sd">                read from the ``qcodesrc.json`` config file.</span>
+<span class="sd">            in_memory_cache: Should measured data be keep in memory</span>
+<span class="sd">                and available as part of the `dataset.cache` object.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">write_in_background</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">write_in_background</span> <span class="o">=</span> <span class="n">qc</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">write_in_background</span>
@@ -1294,7 +1304,8 @@
                       <span class="n">parent_datasets</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_parent_datasets</span><span class="p">,</span>
                       <span class="n">extra_log_info</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_extra_log_info</span><span class="p">,</span>
                       <span class="n">write_in_background</span><span class="o">=</span><span class="n">write_in_background</span><span class="p">,</span>
-                      <span class="n">shapes</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_shapes</span><span class="p">)</span></div></div>
+                      <span class="n">shapes</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_shapes</span><span class="p">,</span>
+                      <span class="n">in_memory_cache</span><span class="o">=</span><span class="n">in_memory_cache</span><span class="p">)</span></div></div>
 </pre></div>
 
            </div>

@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.22.0+92.g80179e638f
+                0.22.0+136.g6580e92f09
               </div>
             
           
@@ -461,7 +461,8 @@
                  <span class="n">specs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SpecsOrInterDeps</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">values</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">VALUES</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">metadata</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                 <span class="n">shapes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Shapes</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+                 <span class="n">shapes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Shapes</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">in_memory_cache</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create a new :class:`.DataSet` object. The object can either hold a new run or</span>
 <span class="sd">        an already existing run. If a ``run_id`` is provided, then an old run is</span>
@@ -491,6 +492,9 @@
 <span class="sd">                of the data captured as a list of integers. The list is in the</span>
 <span class="sd">                same order as the interdependencies or paramspecs provided.</span>
 <span class="sd">                Ignored if ``run_id`` is provided.</span>
+<span class="sd">            in_memory_cache: Should measured data be keep in memory</span>
+<span class="sd">                and available as part of the `dataset.cache` object.</span>
+
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">conn</span> <span class="o">=</span> <span class="n">conn_from_dbpath_or_conn</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">path_to_db</span><span class="p">)</span>
 
@@ -500,6 +504,7 @@
         <span class="c1">#: In memory representation of the data in the dataset.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="p">:</span> <span class="n">DataSetCache</span> <span class="o">=</span> <span class="n">DataSetCache</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_results</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">VALUE</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_in_memory_cache</span> <span class="o">=</span> <span class="n">in_memory_cache</span>
 
         <span class="k">if</span> <span class="n">run_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">run_exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conn</span><span class="p">,</span> <span class="n">run_id</span><span class="p">):</span>
@@ -1634,13 +1639,23 @@
 
         <span class="n">toplevel_params</span> <span class="o">=</span> <span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">interdeps</span><span class="o">.</span><span class="n">dependencies</span><span class="p">)</span>
                            <span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">result_dict</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_in_memory_cache</span><span class="p">:</span>
+            <span class="n">new_results</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">toplevel_param</span> <span class="ow">in</span> <span class="n">toplevel_params</span><span class="p">:</span>
             <span class="n">inff_params</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">interdeps</span><span class="o">.</span><span class="n">inferences</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">toplevel_param</span><span class="p">,</span> <span class="p">()))</span>
             <span class="n">deps_params</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">interdeps</span><span class="o">.</span><span class="n">dependencies</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">toplevel_param</span><span class="p">,</span> <span class="p">()))</span>
             <span class="n">all_params</span> <span class="o">=</span> <span class="p">(</span><span class="n">inff_params</span>
                           <span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">deps_params</span><span class="p">)</span>
                           <span class="o">.</span><span class="n">union</span><span class="p">({</span><span class="n">toplevel_param</span><span class="p">}))</span>
-            <span class="n">res_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">VALUE</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># the dict to append to _results</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_in_memory_cache</span><span class="p">:</span>
+                <span class="n">new_results</span><span class="p">[</span><span class="n">toplevel_param</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">all_params</span><span class="p">:</span>
+                    <span class="n">new_results</span><span class="p">[</span><span class="n">toplevel_param</span><span class="o">.</span><span class="n">name</span><span class="p">][</span><span class="n">param</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reshape_array_for_cache</span><span class="p">(</span>
+                        <span class="n">param</span><span class="p">,</span>
+                        <span class="n">result_dict</span><span class="p">[</span><span class="n">param</span><span class="p">]</span>
+                    <span class="p">)</span>
+
             <span class="k">if</span> <span class="n">toplevel_param</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;array&#39;</span><span class="p">:</span>
                 <span class="n">res_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_finalize_res_dict_array</span><span class="p">(</span>
                     <span class="n">result_dict</span><span class="p">,</span> <span class="n">all_params</span><span class="p">)</span>
@@ -1649,7 +1664,7 @@
                     <span class="n">result_dict</span><span class="p">,</span> <span class="n">toplevel_param</span><span class="p">,</span>
                     <span class="n">inff_params</span><span class="p">,</span> <span class="n">deps_params</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">res_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">ps</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">result_dict</span><span class="p">[</span><span class="n">ps</span><span class="p">]</span> <span class="k">for</span> <span class="n">ps</span> <span class="ow">in</span> <span class="n">all_params</span><span class="p">}</span>
+                <span class="n">res_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">VALUE</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">ps</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">result_dict</span><span class="p">[</span><span class="n">ps</span><span class="p">]</span> <span class="k">for</span> <span class="n">ps</span> <span class="ow">in</span> <span class="n">all_params</span><span class="p">}</span>
                 <span class="n">res_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">res_dict</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_results</span> <span class="o">+=</span> <span class="n">res_list</span>
 
@@ -1661,6 +1676,36 @@
         <span class="k">if</span> <span class="n">standalones</span><span class="p">:</span>
             <span class="n">stdln_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">st</span><span class="p">:</span> <span class="n">result_dict</span><span class="p">[</span><span class="n">st</span><span class="p">]</span> <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="n">standalones</span><span class="p">}</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_results</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_finalize_res_dict_standalones</span><span class="p">(</span><span class="n">stdln_dict</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_in_memory_cache</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="n">standalones</span><span class="p">:</span>
+                    <span class="n">new_results</span><span class="p">[</span><span class="n">st</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+                        <span class="n">st</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reshape_array_for_cache</span><span class="p">(</span><span class="n">st</span><span class="p">,</span> <span class="n">result_dict</span><span class="p">[</span><span class="n">st</span><span class="p">])</span>
+                    <span class="p">}</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_in_memory_cache</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="o">.</span><span class="n">add_data</span><span class="p">(</span><span class="n">new_results</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_reshape_array_for_cache</span><span class="p">(</span>
+            <span class="n">param</span><span class="p">:</span> <span class="n">ParamSpecBase</span><span class="p">,</span>
+            <span class="n">param_data</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Shape cache data so it matches data read from database.</span>
+<span class="sd">        This means:</span>
+
+<span class="sd">        - Add an extra singleton dim to array data</span>
+<span class="sd">        - flatten non array data into a linear array.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">param_data</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">param_data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">param</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;array&quot;</span><span class="p">:</span>
+            <span class="n">new_data</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span>
+                <span class="n">param_data</span><span class="p">,</span>
+                <span class="p">(</span><span class="mi">1</span><span class="p">,)</span> <span class="o">+</span> <span class="n">param_data</span><span class="o">.</span><span class="n">shape</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_data</span> <span class="o">=</span> <span class="n">param_data</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">new_data</span>
 
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">_finalize_res_dict_array</span><span class="p">(</span>
@@ -1963,7 +2008,9 @@
                  <span class="n">specs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SPECS</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">values</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">VALUES</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                  <span class="n">metadata</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-                 <span class="n">conn</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ConnectionPlus</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataSet</span><span class="p">:</span>
+                 <span class="n">conn</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ConnectionPlus</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">in_memory_cache</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataSet</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create a new dataset in the currently active/selected database.</span>
 
@@ -1976,6 +2023,8 @@
 <span class="sd">        specs: list of parameters to create this dataset with</span>
 <span class="sd">        values: the values to associate with the parameters</span>
 <span class="sd">        metadata: the metadata to associate with the dataset</span>
+<span class="sd">        in_memory_cache: Should measured data be keep in memory</span>
+<span class="sd">            and available as part of the `dataset.cache` object.</span>
 
 <span class="sd">    Return:</span>
 <span class="sd">        the newly created :class:`.DataSet`</span>
@@ -1984,7 +2033,7 @@
     <span class="c1"># in `Runner` to pass a connection from an existing `Experiment`.</span>
     <span class="n">d</span> <span class="o">=</span> <span class="n">DataSet</span><span class="p">(</span><span class="n">path_to_db</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">run_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conn</span><span class="o">=</span><span class="n">conn</span><span class="p">,</span>
                 <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">specs</span><span class="o">=</span><span class="n">specs</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="n">values</span><span class="p">,</span>
-                <span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">,</span> <span class="n">exp_id</span><span class="o">=</span><span class="n">exp_id</span><span class="p">)</span>
+                <span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">,</span> <span class="n">exp_id</span><span class="o">=</span><span class="n">exp_id</span><span class="p">,</span> <span class="n">in_memory_cache</span><span class="o">=</span><span class="n">in_memory_cache</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">d</span></div>
 
