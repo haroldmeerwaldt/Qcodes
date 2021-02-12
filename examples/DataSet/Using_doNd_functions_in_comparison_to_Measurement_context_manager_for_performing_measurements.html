@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Using doNd functions in comparison to Measurement context manager for performing measurements &mdash; QCoDeS 0.23.0.dev1 documentation</title>
+  <title>Using doNd functions in comparison to Measurement context manager for performing measurements &mdash; QCoDeS 0 documentation</title>
   
 
   
@@ -68,7 +68,7 @@
             
             
               <div class="version">
-                0.23.0.dev1+32.gdc4bc76173
+                0+untagged.1.g04cff12
               </div>
             
           
@@ -539,13 +539,13 @@ point measurements.</p>
 <div class="highlight"><pre>
 Logging hadn&#39;t been started.
 Activating auto-logging. Current session state plus future input saved.
-Filename       : /home/vsts/.qcodes/logs/command_history.log
+Filename       : /home/runner/.qcodes/logs/command_history.log
 Mode           : append
 Output logging : True
 Raw input log  : False
 Timestamping   : True
 State          : active
-Qcodes Logfile : /home/vsts/.qcodes/logs/210212-9510-qcodes.log
+Qcodes Logfile : /home/runner/.qcodes/logs/210212-4691-qcodes.log
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -564,14 +564,14 @@ Qcodes Logfile : /home/vsts/.qcodes/logs/210212-9510-qcodes.log
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Upgrading database; v0 -&gt; v1: : 0it [00:00, ?it/s]
-Upgrading database; v1 -&gt; v2: 100%|██████████| 1/1 [00:00&lt;00:00, 460.81it/s]
+Upgrading database; v1 -&gt; v2: 100%|██████████| 1/1 [00:00&lt;00:00, 549.86it/s]
 Upgrading database; v2 -&gt; v3: : 0it [00:00, ?it/s]
 Upgrading database; v3 -&gt; v4: : 0it [00:00, ?it/s]
-Upgrading database; v4 -&gt; v5: 100%|██████████| 1/1 [00:00&lt;00:00, 492.40it/s]
+Upgrading database; v4 -&gt; v5: 100%|██████████| 1/1 [00:00&lt;00:00, 436.95it/s]
 Upgrading database; v5 -&gt; v6: : 0it [00:00, ?it/s]
-Upgrading database; v6 -&gt; v7: 100%|██████████| 1/1 [00:00&lt;00:00, 198.06it/s]
-Upgrading database; v7 -&gt; v8: 100%|██████████| 1/1 [00:00&lt;00:00, 709.10it/s]
-Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00&lt;00:00, 501.35it/s]
+Upgrading database; v6 -&gt; v7: 100%|██████████| 1/1 [00:00&lt;00:00, 245.24it/s]
+Upgrading database; v7 -&gt; v8: 100%|██████████| 1/1 [00:00&lt;00:00, 869.11it/s]
+Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00&lt;00:00, 625.92it/s]
 </pre></div></div>
 </div>
 <p>First we setup two dummy instruments to have something to measure. The dmm is setup to generate an output depending on the values set on the dac simulating a real experiment.</p>
@@ -697,8 +697,8 @@ Starting experimental run with id: 2.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(results #2@/home/vsts/work/1/s/docs/examples/DataSet/tutorial_doNd.db
- ---------------------------------------------------------------------
+(results #2@/home/runner/work/Qcodes/Qcodes/docs/examples/DataSet/tutorial_doNd.db
+ ---------------------------------------------------------------------------------
  dac_ch1 - numeric
  dmm_v1 - numeric
  dmm_v2 - numeric,
@@ -733,8 +733,8 @@ Starting experimental run with id: 3.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(results #3@/home/vsts/work/1/s/docs/examples/DataSet/tutorial_doNd.db
- ---------------------------------------------------------------------
+(results #3@/home/runner/work/Qcodes/Qcodes/docs/examples/DataSet/tutorial_doNd.db
+ ---------------------------------------------------------------------------------
  dac_ch1 - numeric
  dmm_v1 - numeric
  dmm_v2 - numeric,
@@ -820,8 +820,8 @@ Starting experimental run with id: 4.
 <div class="highlight"><pre>
 ([&lt;AxesSubplot:title={&#39;center&#39;:&#39;Run #4, Experiment doNd_VS_Measurement (no sample)&#39;}, xlabel=&#39;Gate ch1 (V)&#39;, ylabel=&#39;Gate ch2 (V)&#39;&gt;,
   &lt;AxesSubplot:title={&#39;center&#39;:&#39;Run #4, Experiment doNd_VS_Measurement (no sample)&#39;}, xlabel=&#39;Gate ch1 (V)&#39;, ylabel=&#39;Gate ch2 (V)&#39;&gt;],
- [&lt;matplotlib.colorbar.Colorbar at 0x7f02b09baa50&gt;,
-  &lt;matplotlib.colorbar.Colorbar at 0x7f02b0977250&gt;])
+ [&lt;matplotlib.colorbar.Colorbar at 0x7fbf63c04e50&gt;,
+  &lt;matplotlib.colorbar.Colorbar at 0x7fbf63bde690&gt;])
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -866,16 +866,16 @@ Starting experimental run with id: 5.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(results #5@/home/vsts/work/1/s/docs/examples/DataSet/tutorial_doNd.db
- ---------------------------------------------------------------------
+(results #5@/home/runner/work/Qcodes/Qcodes/docs/examples/DataSet/tutorial_doNd.db
+ ---------------------------------------------------------------------------------
  dac_ch1 - numeric
  dac_ch2 - numeric
  dmm_v1 - numeric
  dmm_v2 - numeric,
  [&lt;AxesSubplot:title={&#39;center&#39;:&#39;Run #5, Experiment doNd_VS_Measurement (no sample)&#39;}, xlabel=&#39;Gate ch1 (V)&#39;, ylabel=&#39;Gate ch2 (V)&#39;&gt;,
   &lt;AxesSubplot:title={&#39;center&#39;:&#39;Run #5, Experiment doNd_VS_Measurement (no sample)&#39;}, xlabel=&#39;Gate ch1 (V)&#39;, ylabel=&#39;Gate ch2 (V)&#39;&gt;],
- [&lt;matplotlib.colorbar.Colorbar at 0x7f02b07f9510&gt;,
-  &lt;matplotlib.colorbar.Colorbar at 0x7f02b07cdd50&gt;])
+ [&lt;matplotlib.colorbar.Colorbar at 0x7fbf63a3f890&gt;,
+  &lt;matplotlib.colorbar.Colorbar at 0x7fbf63a08d10&gt;])
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -948,8 +948,8 @@ Starting experimental run with id: 7.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(results #6@/home/vsts/work/1/s/docs/examples/DataSet/tutorial_doNd.db
- ---------------------------------------------------------------------
+(results #6@/home/runner/work/Qcodes/Qcodes/docs/examples/DataSet/tutorial_doNd.db
+ ---------------------------------------------------------------------------------
  dac_ch1 - numeric
  dmm_v1 - numeric
  dmm_v2 - numeric,
@@ -987,16 +987,16 @@ Starting experimental run with id: 7.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(results #7@/home/vsts/work/1/s/docs/examples/DataSet/tutorial_doNd.db
- ---------------------------------------------------------------------
+(results #7@/home/runner/work/Qcodes/Qcodes/docs/examples/DataSet/tutorial_doNd.db
+ ---------------------------------------------------------------------------------
  dac_ch1 - numeric
  dac_ch2 - numeric
  dmm_v1 - numeric
  dmm_v2 - numeric,
  [&lt;AxesSubplot:title={&#39;center&#39;:&#39;Run #7, Experiment doNd_VS_Measurement (no sample)&#39;}, xlabel=&#39;Gate ch1 (mV)&#39;, ylabel=&#39;Gate ch2 (mV)&#39;&gt;,
   &lt;AxesSubplot:title={&#39;center&#39;:&#39;Run #7, Experiment doNd_VS_Measurement (no sample)&#39;}, xlabel=&#39;Gate ch1 (mV)&#39;, ylabel=&#39;Gate ch2 (mV)&#39;&gt;],
- [&lt;matplotlib.colorbar.Colorbar at 0x7f02b0c28510&gt;,
-  &lt;matplotlib.colorbar.Colorbar at 0x7f02b0cf2ad0&gt;])
+ [&lt;matplotlib.colorbar.Colorbar at 0x7fbf63af3890&gt;,
+  &lt;matplotlib.colorbar.Colorbar at 0x7fbf6258a790&gt;])
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">

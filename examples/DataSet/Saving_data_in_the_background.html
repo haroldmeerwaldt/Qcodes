@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Saving data in the background &mdash; QCoDeS 0.23.0.dev1 documentation</title>
+  <title>Saving data in the background &mdash; QCoDeS 0 documentation</title>
   
 
   
@@ -68,7 +68,7 @@
             
             
               <div class="version">
-                0.23.0.dev1+32.gdc4bc76173
+                0+untagged.1.g04cff12
               </div>
             
           
@@ -514,11 +514,11 @@ alt="Binder badge"
 <p>The QCoDeS Measurement allows for the actual data saving to take place in a background thread. This notebook provides an example of using that feature to reduce the overall time spent running the measurement.</p>
 <div class="section" id="Can-I-haz-speedup?">
 <h2>Can I haz speedup?<a class="headerlink" href="#Can-I-haz-speedup?" title="Permalink to this headline">¶</a></h2>
-<p>If the time you spend actually writing the data to disk is comparable to the time it takes you to acquire the data (e.g. by waiting for a lock-in amplifier to integrate or an algorithm to return a result), then you can indeed expect a speedup of up to a factor of 2. If your measurement time is clearly dominated by either the acquisition or the writing to the DB file, then writing the data in the background won’t offer you much of a speedup.</p>
+<p>If the time you spend actually writing the data to disk is comparable to the time it takes you to acquire the data (e.g. by waiting for a lock-in amplifier to integrate or an algorithm to return a result), then you can indeed expect a speedup of up to a factor of 2. If your measurement time is clearly dominated by either the acquisition or the writing to the DB file, then writing the data in the background won’t offer you much of a speedup.</p>
 </div>
 <div class="section" id="Example-Measurement">
 <h2>Example Measurement<a class="headerlink" href="#Example-Measurement" title="Permalink to this headline">¶</a></h2>
-<p>We’ll acquire a 2D heatmap and pretend that the acquisition is fairly slow. We’ll also print how long the acquisition and the saving takes. We have chosen a <em>fair</em> example showing <em>some</em> speed-up. It is indeed possible to tailor situations where the speed-up is larger, e.g. by saving big (smth like 3 x 100_000_000 points per save) numpy arrays, but such datasets are not easily visaulised. In this notebook we get a decent speed-up and two nice heatmaps.</p>
+<p>We’ll acquire a 2D heatmap and pretend that the acquisition is fairly slow. We’ll also print how long the acquisition and the saving takes. We have chosen a <em>fair</em> example showing <em>some</em> speed-up. It is indeed possible to tailor situations where the speed-up is larger, e.g. by saving big (smth like 3 x 100_000_000 points per save) numpy arrays, but such datasets are not easily visaulised. In this notebook we get a decent speed-up and two nice heatmaps.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -545,13 +545,13 @@ alt="Binder badge"
 <div class="highlight"><pre>
 Logging hadn&#39;t been started.
 Activating auto-logging. Current session state plus future input saved.
-Filename       : /home/vsts/.qcodes/logs/command_history.log
+Filename       : /home/runner/.qcodes/logs/command_history.log
 Mode           : append
 Output logging : True
 Raw input log  : False
 Timestamping   : True
 State          : active
-Qcodes Logfile : /home/vsts/.qcodes/logs/210212-9318-qcodes.log
+Qcodes Logfile : /home/runner/.qcodes/logs/210212-4619-qcodes.log
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -571,14 +571,14 @@ Qcodes Logfile : /home/vsts/.qcodes/logs/210212-9318-qcodes.log
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Upgrading database; v0 -&gt; v1: : 0it [00:00, ?it/s]
-Upgrading database; v1 -&gt; v2: 100%|██████████| 1/1 [00:00&lt;00:00, 533.69it/s]
+Upgrading database; v1 -&gt; v2: 100%|██████████| 1/1 [00:00&lt;00:00, 587.19it/s]
 Upgrading database; v2 -&gt; v3: : 0it [00:00, ?it/s]
 Upgrading database; v3 -&gt; v4: : 0it [00:00, ?it/s]
-Upgrading database; v4 -&gt; v5: 100%|██████████| 1/1 [00:00&lt;00:00, 368.12it/s]
+Upgrading database; v4 -&gt; v5: 100%|██████████| 1/1 [00:00&lt;00:00, 588.92it/s]
 Upgrading database; v5 -&gt; v6: : 0it [00:00, ?it/s]
-Upgrading database; v6 -&gt; v7: 100%|██████████| 1/1 [00:00&lt;00:00, 233.26it/s]
-Upgrading database; v7 -&gt; v8: 100%|██████████| 1/1 [00:00&lt;00:00, 385.44it/s]
-Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00&lt;00:00, 445.54it/s]
+Upgrading database; v6 -&gt; v7: 100%|██████████| 1/1 [00:00&lt;00:00, 239.94it/s]
+Upgrading database; v7 -&gt; v8: 100%|██████████| 1/1 [00:00&lt;00:00, 435.91it/s]
+Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00&lt;00:00, 1330.26it/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -587,7 +587,7 @@ Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-saving_data_in_bg#no_sample#1@/tmp/0eb1f77555257661cfe9c9bcbdcc49a8d5b387ba03b8b683.db
+saving_data_in_bg#no_sample#1@/tmp/cfde294c4e81f05cded4d6676d20012c11d55c3e44b57ea3.db
 --------------------------------------------------------------------------------------
 </pre></div></div>
 </div>
@@ -634,7 +634,7 @@ saving_data_in_bg#no_sample#1@/tmp/0eb1f77555257661cfe9c9bcbdcc49a8d5b387ba03b8b
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;qcodes.dataset.measurements.Measurement at 0x7fc0f4ccfe10&gt;
+&lt;qcodes.dataset.measurements.Measurement at 0x7fa0e574ce50&gt;
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -703,10 +703,10 @@ saving_data_in_bg#no_sample#1@/tmp/0eb1f77555257661cfe9c9bcbdcc49a8d5b387ba03b8b
 Starting experimental run with id: 1.
 Report:
 Number of data points saved: 10 x 10000 points
-Init time:            0.01235893699981716 s
-Data generation time: 1.0179462029998376 s
-Data saving time:     1.3199221610000222 s
-Total time:           2.3504335999998602 s
+Init time:            0.011892790000047171 s
+Data generation time: 1.0154068679999 s
+Data saving time:     1.3976812309997513 s
+Total time:           2.425153989999899 s
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -784,10 +784,10 @@ Total time:           2.3504335999998602 s
 Starting experimental run with id: 2.
 Report:
 Number of data points saved: 10 x 10000 points
-Init time:            0.012038932999985263 s
-Data generation time: 1.0185256369998115 s
-Data saving time:     0.4797803320004732 s
-Total time:           1.5104957010000817 s
+Init time:            0.011108283000112351 s
+Data generation time: 1.0266856720006672 s
+Data saving time:     0.5247673209996719 s
+Total time:           1.5627340769999591 s
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
