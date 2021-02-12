@@ -68,7 +68,7 @@
             
             
               <div class="version">
-                0+untagged.1.g04cff12
+                0+untagged.1.gae9d931
               </div>
             
           
@@ -495,6 +495,25 @@ updated.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt id="qcodes.station.Station.load_instrument">
+<code class="sig-name descname">load_instrument</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">identifier</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)">str</a></span></em>, <em class="sig-param"><span class="n">revive_instance</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(in Python v3.7)">bool</a></span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="instrument/base.html#qcodes.instrument.base.Instrument" title="qcodes.instrument.base.Instrument">qcodes.instrument.base.Instrument</a><a class="reference internal" href="../_modules/qcodes/station.html#Station.load_instrument"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.station.Station.load_instrument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an <a class="reference internal" href="instrument/base.html#qcodes.instrument.base.Instrument" title="qcodes.instrument.base.Instrument"><code class="xref py py-class docutils literal notranslate"><span class="pre">Instrument</span></code></a> instance as described by the
+loaded configuration file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> – The identfying string that is looked up in the yaml
+configuration file, which identifies the instrument to be added.</p></li>
+<li><p><strong>revive_instance</strong> – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, try to return an instrument with the
+specified name instead of closing it and creating a new one.</p></li>
+<li><p><strong>**kwargs</strong> – Additional keyword arguments that get passed on to the
+<code class="docutils literal notranslate"><span class="pre">__init__</span></code>-method of the instrument to be added.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="qcodes.station.Station.load_metadata">
 <code class="sig-name descname">load_metadata</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">metadata</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>Any<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.7/library/constants.html#None" title="(in Python v3.7)">None</a><a class="headerlink" href="#qcodes.station.Station.load_metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load metadata into this classes metadata dictionary.</p>
@@ -527,20 +546,25 @@ instead, override <a class="reference internal" href="#qcodes.station.Station.sn
 </dd></dl>
 
 <dl class="py method">
-<dt id="qcodes.station.Station.load_instrument">
-<code class="sig-name descname">load_instrument</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">identifier</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)">str</a></span></em>, <em class="sig-param"><span class="n">revive_instance</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(in Python v3.7)">bool</a></span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="instrument/base.html#qcodes.instrument.base.Instrument" title="qcodes.instrument.base.Instrument">qcodes.instrument.base.Instrument</a><a class="reference internal" href="../_modules/qcodes/station.html#Station.load_instrument"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.station.Station.load_instrument" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates an <a class="reference internal" href="instrument/base.html#qcodes.instrument.base.Instrument" title="qcodes.instrument.base.Instrument"><code class="xref py py-class docutils literal notranslate"><span class="pre">Instrument</span></code></a> instance as described by the
-loaded configuration file.</p>
+<dt id="qcodes.station.Station.load_all_instruments">
+<code class="sig-name descname">load_all_instruments</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">only_names</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Iterable<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)">str</a><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_types</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Iterable<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)">str</a><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)">str</a><span class="p">, </span><span class="p">…</span><span class="p">]</span><a class="reference internal" href="../_modules/qcodes/station.html#Station.load_all_instruments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.station.Station.load_all_instruments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load all instruments specified in the loaded YAML station configuration.</p>
+<p>Optionally, the instruments to be loaded can be filtered by their
+names or types, use <code class="docutils literal notranslate"><span class="pre">only_names</span></code> and <code class="docutils literal notranslate"><span class="pre">only_types</span></code>
+arguments for that. It is an error to supply both <code class="docutils literal notranslate"><span class="pre">only_names</span></code>
+and <code class="docutils literal notranslate"><span class="pre">only_types</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>identifier</strong> – The identfying string that is looked up in the yaml
-configuration file, which identifies the instrument to be added.</p></li>
-<li><p><strong>revive_instance</strong> – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, try to return an instrument with the
-specified name instead of closing it and creating a new one.</p></li>
-<li><p><strong>**kwargs</strong> – Additional keyword arguments that get passed on to the
-<code class="docutils literal notranslate"><span class="pre">__init__</span></code>-method of the instrument to be added.</p></li>
+<li><p><strong>only_names</strong> – List of instrument names to load from the config.
+If left as None, then all instruments are loaded.</p></li>
+<li><p><strong>only_types</strong> – List of instrument types e.g. the class names
+of the instruments to load. If left as None, then all
+instruments are loaded.</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The names of the loaded instruments</p>
 </dd>
 </dl>
 </dd></dl>

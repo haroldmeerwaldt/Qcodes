@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0+untagged.1.g04cff12
+                0+untagged.1.gae9d931
               </div>
             
           
@@ -174,7 +174,7 @@
 
 <span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">suppress</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="p">(</span>
-    <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">cast</span><span class="p">,</span> <span class="n">AnyStr</span><span class="p">,</span> <span class="n">IO</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">)</span>
+    <span class="n">Dict</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">cast</span><span class="p">,</span> <span class="n">AnyStr</span><span class="p">,</span> <span class="n">IO</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">ModuleType</span>
 <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
 <span class="kn">import</span> <span class="nn">importlib</span>
@@ -737,7 +737,60 @@
             <span class="n">add_parameter_from_dict</span><span class="p">(</span><span class="n">local_instr</span><span class="p">,</span> <span class="n">parts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">options</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">instr</span><span class="p">)</span>
         <span class="n">update_monitor</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">instr</span></div></div>
+        <span class="k">return</span> <span class="n">instr</span></div>
+
+<div class="viewcode-block" id="Station.load_all_instruments"><a class="viewcode-back" href="../../api/station.html#qcodes.station.Station.load_all_instruments">[docs]</a>    <span class="k">def</span> <span class="nf">load_all_instruments</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                             <span class="n">only_names</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                             <span class="n">only_types</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                             <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load all instruments specified in the loaded YAML station configuration.</span>
+
+<span class="sd">        Optionally, the instruments to be loaded can be filtered by their</span>
+<span class="sd">        names or types, use ``only_names`` and ``only_types``</span>
+<span class="sd">        arguments for that. It is an error to supply both ``only_names``</span>
+<span class="sd">        and ``only_types``.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            only_names: List of instrument names to load from the config.</span>
+<span class="sd">                If left as None, then all instruments are loaded.</span>
+<span class="sd">            only_types: List of instrument types e.g. the class names</span>
+<span class="sd">                of the instruments to load. If left as None, then all</span>
+<span class="sd">                instruments are loaded.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The names of the loaded instruments</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span>
+        <span class="k">if</span> <span class="n">config</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Station has no config&quot;</span><span class="p">)</span>
+
+        <span class="n">instrument_names_to_load</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">only_names</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">only_types</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">instrument_names_to_load</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;instruments&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="k">elif</span> <span class="n">only_types</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">only_names</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">instrument_names_to_load</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">only_names</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">only_types</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">only_names</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">inst_name</span><span class="p">,</span> <span class="n">inst_dict</span> <span class="ow">in</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;instruments&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="s2">&quot;driver&quot;</span> <span class="ow">in</span> <span class="n">inst_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                    <span class="c1"># fallback for old format where type was used</span>
+                    <span class="c1"># together with the driver key.</span>
+                    <span class="n">inst_type</span> <span class="o">=</span> <span class="n">inst_dict</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">inst_type</span> <span class="o">=</span> <span class="n">inst_dict</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">inst_type</span> <span class="ow">in</span> <span class="n">only_types</span><span class="p">:</span>
+                    <span class="n">instrument_names_to_load</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">inst_name</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;It is an error to supply both ``only_names`` &quot;</span>
+                <span class="s2">&quot;and ``only_types`` arguments.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">instrument</span> <span class="ow">in</span> <span class="n">instrument_names_to_load</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">load_instrument</span><span class="p">(</span><span class="n">instrument</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">instrument_names_to_load</span><span class="p">)</span></div></div>
 
 
 <div class="viewcode-block" id="update_config_schema"><a class="viewcode-back" href="../../api/station.html#qcodes.station.update_config_schema">[docs]</a><span class="k">def</span> <span class="nf">update_config_schema</span><span class="p">(</span>
