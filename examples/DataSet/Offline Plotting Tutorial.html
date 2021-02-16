@@ -35,6 +35,7 @@
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -68,7 +69,7 @@
             
             
               <div class="version">
-                0.23.0.dev1+79.g256e242fea
+                0.23.0.dev1+87.g5b4b0ef68a
               </div>
             
           
@@ -546,7 +547,7 @@ Output logging : True
 Raw input log  : False
 Timestamping   : True
 State          : active
-Qcodes Logfile : /home/runner/.qcodes/logs/210216-4049-qcodes.log
+Qcodes Logfile : /home/runner/.qcodes/logs/210216-4098-qcodes.log
 </pre></div></div>
 </div>
 <p>Let us first initialise our database and create an experiment which shall produce the data to be visualise.</p>
@@ -1029,7 +1030,7 @@ Starting experimental run with id: 14.
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-2021-02-16 08:56:08,214 ¦ py.warnings ¦ WARNING ¦ warnings ¦ _showwarnmsg ¦ 110 ¦ /opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/qcodes/dataset/data_export.py:172: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray.
+2021-02-16 09:23:25,383 ¦ py.warnings ¦ WARNING ¦ warnings ¦ _showwarnmsg ¦ 110 ¦ /opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/qcodes/dataset/data_export.py:172: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray.
   return np.array(rows)
 
 </pre></div></div>
@@ -1208,8 +1209,8 @@ Starting experimental run with id: 17.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-CPU times: user 913 ms, sys: 16.1 ms, total: 929 ms
-Wall time: 927 ms
+CPU times: user 990 ms, sys: 16.6 ms, total: 1.01 s
+Wall time: 1.04 s
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1235,8 +1236,8 @@ Wall time: 927 ms
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-CPU times: user 6.76 s, sys: 59.8 ms, total: 6.82 s
-Wall time: 6.82 s
+CPU times: user 9.33 s, sys: 40 ms, total: 9.37 s
+Wall time: 9.37 s
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">

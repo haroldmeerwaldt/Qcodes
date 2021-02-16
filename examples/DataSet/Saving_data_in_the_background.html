@@ -35,6 +35,7 @@
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -68,7 +69,7 @@
             
             
               <div class="version">
-                0.23.0.dev1+79.g256e242fea
+                0.23.0.dev1+87.g5b4b0ef68a
               </div>
             
           
@@ -551,7 +552,7 @@ Output logging : True
 Raw input log  : False
 Timestamping   : True
 State          : active
-Qcodes Logfile : /home/runner/.qcodes/logs/210216-4484-qcodes.log
+Qcodes Logfile : /home/runner/.qcodes/logs/210216-4559-qcodes.log
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -571,14 +572,14 @@ Qcodes Logfile : /home/runner/.qcodes/logs/210216-4484-qcodes.log
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Upgrading database; v0 -&gt; v1: : 0it [00:00, ?it/s]
-Upgrading database; v1 -&gt; v2: 100%|██████████| 1/1 [00:00&lt;00:00, 1235.07it/s]
+Upgrading database; v1 -&gt; v2: 100%|██████████| 1/1 [00:00&lt;00:00, 977.24it/s]
 Upgrading database; v2 -&gt; v3: : 0it [00:00, ?it/s]
 Upgrading database; v3 -&gt; v4: : 0it [00:00, ?it/s]
-Upgrading database; v4 -&gt; v5: 100%|██████████| 1/1 [00:00&lt;00:00, 409.16it/s]
+Upgrading database; v4 -&gt; v5: 100%|██████████| 1/1 [00:00&lt;00:00, 383.64it/s]
 Upgrading database; v5 -&gt; v6: : 0it [00:00, ?it/s]
-Upgrading database; v6 -&gt; v7: 100%|██████████| 1/1 [00:00&lt;00:00, 274.62it/s]
-Upgrading database; v7 -&gt; v8: 100%|██████████| 1/1 [00:00&lt;00:00, 1150.07it/s]
-Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00&lt;00:00, 1290.95it/s]
+Upgrading database; v6 -&gt; v7: 100%|██████████| 1/1 [00:00&lt;00:00, 385.93it/s]
+Upgrading database; v7 -&gt; v8: 100%|██████████| 1/1 [00:00&lt;00:00, 934.35it/s]
+Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00&lt;00:00, 1058.10it/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -587,7 +588,7 @@ Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-saving_data_in_bg#no_sample#1@/tmp/4b49df8ebe5c0b1e522384893cc930774974dc5a47ebe954.db
+saving_data_in_bg#no_sample#1@/tmp/7769fd96885d821323db0961faea0ef90041528f2199305f.db
 --------------------------------------------------------------------------------------
 </pre></div></div>
 </div>
@@ -634,7 +635,7 @@ saving_data_in_bg#no_sample#1@/tmp/4b49df8ebe5c0b1e522384893cc930774974dc5a47ebe
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;qcodes.dataset.measurements.Measurement at 0x7f4e79aab890&gt;
+&lt;qcodes.dataset.measurements.Measurement at 0x7fa8a067bbd0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -703,10 +704,10 @@ saving_data_in_bg#no_sample#1@/tmp/4b49df8ebe5c0b1e522384893cc930774974dc5a47ebe
 Starting experimental run with id: 1.
 Report:
 Number of data points saved: 10 x 10000 points
-Init time:            0.013034986999969078 s
-Data generation time: 1.0129519180001125 s
-Data saving time:     1.417437176000135 s
-Total time:           2.4435813820000476 s
+Init time:            0.02192266599990944 s
+Data generation time: 1.014675484999998 s
+Data saving time:     1.4925348680001207 s
+Total time:           2.5293502179999905 s
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -784,10 +785,10 @@ Total time:           2.4435813820000476 s
 Starting experimental run with id: 2.
 Report:
 Number of data points saved: 10 x 10000 points
-Init time:            0.015491101999941748 s
-Data generation time: 1.0328903700000183 s
-Data saving time:     0.4917627220000895 s
-Total time:           1.5402872949999846 s
+Init time:            0.013663116000088849 s
+Data generation time: 1.0229294620002065 s
+Data saving time:     0.5423186919999807 s
+Total time:           1.5791280690000349 s
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
