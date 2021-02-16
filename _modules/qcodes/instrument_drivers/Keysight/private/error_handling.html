@@ -33,8 +33,6 @@
         <script src="../../../../../_static/underscore.js"></script>
         <script src="../../../../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
         <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     
     <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
@@ -67,7 +65,7 @@
             
             
               <div class="version">
-                0.23.0.dev1+87.g5b4b0ef68a
+                0.23.0.dev1+89.g129c797d9e
               </div>
             
           
@@ -173,7 +171,7 @@
 <span class="kn">from</span> <span class="nn">qcodes.instrument.base</span> <span class="kn">import</span> <span class="n">AbstractInstrument</span>
 
 
-<div class="viewcode-block" id="KeysightErrorQueueMixin"><a class="viewcode-back" href="../../../../../api/generated/qcodes.instrument_drivers.Keysight.private.html#qcodes.instrument_drivers.Keysight.KeysightAgilent_33XXX.KeysightErrorQueueMixin">[docs]</a><span class="k">class</span> <span class="nc">KeysightErrorQueueMixin</span><span class="p">(</span><span class="n">AbstractInstrument</span><span class="p">):</span>
+<div class="viewcode-block" id="KeysightErrorQueueMixin"><a class="viewcode-back" href="../../../../../api/generated/qcodes.instrument_drivers.Keysight.private.html#qcodes.instrument_drivers.Keysight.private.error_handling.KeysightErrorQueueMixin">[docs]</a><span class="k">class</span> <span class="nc">KeysightErrorQueueMixin</span><span class="p">(</span><span class="n">AbstractInstrument</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Mixin class for visa instruments that happen to implement an error queue.</span>
 
@@ -181,7 +179,7 @@
 <span class="sd">    instruments (which inherit from VisaInstrument class).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="KeysightErrorQueueMixin.error"><a class="viewcode-back" href="../../../../../api/generated/qcodes.instrument_drivers.Keysight.private.html#qcodes.instrument_drivers.Keysight.KeysightAgilent_33XXX.KeysightErrorQueueMixin.error">[docs]</a>    <span class="k">def</span> <span class="nf">error</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+<div class="viewcode-block" id="KeysightErrorQueueMixin.error"><a class="viewcode-back" href="../../../../../api/generated/qcodes.instrument_drivers.Keysight.private.html#qcodes.instrument_drivers.Keysight.private.error_handling.KeysightErrorQueueMixin.error">[docs]</a>    <span class="k">def</span> <span class="nf">error</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the first error message in the queue. It also clears it from</span>
 <span class="sd">        the error queue.</span>
@@ -204,7 +202,7 @@
 
         <span class="k">return</span> <span class="n">code</span><span class="p">,</span> <span class="n">mssg</span></div>
 
-<div class="viewcode-block" id="KeysightErrorQueueMixin.flush_error_queue"><a class="viewcode-back" href="../../../../../api/generated/qcodes.instrument_drivers.Keysight.private.html#qcodes.instrument_drivers.Keysight.KeysightAgilent_33XXX.KeysightErrorQueueMixin.flush_error_queue">[docs]</a>    <span class="k">def</span> <span class="nf">flush_error_queue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="KeysightErrorQueueMixin.flush_error_queue"><a class="viewcode-back" href="../../../../../api/generated/qcodes.instrument_drivers.Keysight.private.html#qcodes.instrument_drivers.Keysight.private.error_handling.KeysightErrorQueueMixin.flush_error_queue">[docs]</a>    <span class="k">def</span> <span class="nf">flush_error_queue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Clear the instrument error queue, and prints it.</span>
 

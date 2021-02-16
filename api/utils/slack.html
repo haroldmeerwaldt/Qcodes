@@ -33,8 +33,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
         <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -69,7 +67,7 @@
             
             
               <div class="version">
-                0.23.0.dev1+87.g5b4b0ef68a
+                0.23.0.dev1+89.g129c797d9e
               </div>
             
           
@@ -256,16 +254,16 @@ They can then be called through Slack IM via:</p>
 performed every time <cite>update()</cite> is called.</p>
 <dl class="py exception">
 <dt id="qcodes.utils.slack.SlackTimeoutWarning">
-<em class="property">exception </em><code class="sig-prename descclassname">qcodes.utils.slack.</code><code class="sig-name descname">SlackTimeoutWarning</code><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#SlackTimeoutWarning"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.SlackTimeoutWarning" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes.utils.slack.</span></code><code class="sig-name descname"><span class="pre">SlackTimeoutWarning</span></code><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#SlackTimeoutWarning"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.SlackTimeoutWarning" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#UserWarning" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserWarning</span></code></a></p>
 <dl class="py attribute">
 <dt id="qcodes.utils.slack.SlackTimeoutWarning.args">
-<code class="sig-name descname">args</code><a class="headerlink" href="#qcodes.utils.slack.SlackTimeoutWarning.args" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">args</span></code><a class="headerlink" href="#qcodes.utils.slack.SlackTimeoutWarning.args" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.SlackTimeoutWarning.with_traceback">
-<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.SlackTimeoutWarning.with_traceback" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">with_traceback</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.SlackTimeoutWarning.with_traceback" title="Permalink to this definition">¶</a></dt>
 <dd><p>Exception.with_traceback(tb) –
 set self.__traceback__ to tb and return self.</p>
 </dd></dl>
@@ -274,12 +272,12 @@ set self.__traceback__ to tb and return self.</p>
 
 <dl class="py function">
 <dt id="qcodes.utils.slack.convert_command">
-<code class="sig-prename descclassname">qcodes.utils.slack.</code><code class="sig-name descname">convert_command</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#convert_command"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.convert_command" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">qcodes.utils.slack.</span></code><code class="sig-name descname"><span class="pre">convert_command</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#convert_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.convert_command" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
 <dt id="qcodes.utils.slack.Slack">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes.utils.slack.</code><code class="sig-name descname">Slack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">interval</span><span class="o">=</span><span class="default_value">3</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_start</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">commands</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes.utils.slack.</span></code><code class="sig-name descname"><span class="pre">Slack</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">commands</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/threading.html#threading.Thread" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">threading.Thread</span></code></a></p>
 <p>Initializes Slack bot, including auto-updating widget if in notebook
 and using multiprocessing.</p>
@@ -302,7 +300,7 @@ The config dict must contain the following keys:</p>
 </dl>
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.start">
-<code class="sig-name descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.start" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">start</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start the thread’s activity.</p>
 <p>It must be called at most once per thread object. It arranges for the
 object’s run() method to be invoked in a separate thread of control.</p>
@@ -312,7 +310,7 @@ same thread object.</p>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.run" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Thread event loop that periodically checks for updates.
 Can be stopped via  <a class="reference internal" href="#qcodes.utils.slack.Slack.stop" title="qcodes.utils.slack.Slack.stop"><code class="xref py py-meth docutils literal notranslate"><span class="pre">stop()</span></code></a> , after which the Thread is stopped.
 :returns: None.</p>
@@ -320,21 +318,21 @@ Can be stopped via  <a class="reference internal" href="#qcodes.utils.slack.Slac
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.stop">
-<code class="sig-name descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.stop" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">stop</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop checking for updates. Can be started again via <a class="reference internal" href="#qcodes.utils.slack.Slack.start" title="qcodes.utils.slack.Slack.start"><code class="xref py py-meth docutils literal notranslate"><span class="pre">start()</span></code></a>.
 :returns: None.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.exit">
-<code class="sig-name descname">exit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.exit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.exit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">exit</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.exit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.exit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Exit event loop, stop Thread.
 :returns: None</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.user_from_id">
-<code class="sig-name descname">user_from_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">user_id</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.user_from_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.user_from_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">user_from_id</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.user_from_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.user_from_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve user from user id.
 :param user_id: Id from which to retrieve user information.</p>
 <dl class="field-list simple">
@@ -349,7 +347,7 @@ Can be stopped via  <a class="reference internal" href="#qcodes.utils.slack.Slac
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.get_users">
-<code class="sig-name descname">get_users</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">usernames</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.get_users"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.get_users" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_users</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">usernames</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.get_users"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.get_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extracts user information for users.
 :param usernames: Slack usernames of users.</p>
 <dl class="field-list simple">
@@ -364,7 +362,7 @@ Can be stopped via  <a class="reference internal" href="#qcodes.utils.slack.Slac
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.get_im_ids">
-<code class="sig-name descname">get_im_ids</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">users</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.get_im_ids"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.get_im_ids" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_im_ids</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">users</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.get_im_ids"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.get_im_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds IM ids of users to users dict.
 Also adds <cite>last_ts</cite> to the latest IM message
 :param users: {username: user}
@@ -378,7 +376,7 @@ Also adds <cite>last_ts</cite> to the latest IM message
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.get_im_messages">
-<code class="sig-name descname">get_im_messages</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">username</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.get_im_messages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.get_im_messages" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_im_messages</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.get_im_messages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.get_im_messages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves IM messages from username.
 :param username: Name of user.
 :param **kwargs: Additional kwargs for retrieving IM messages.</p>
@@ -391,7 +389,7 @@ Also adds <cite>last_ts</cite> to the latest IM message
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.get_new_im_messages">
-<code class="sig-name descname">get_new_im_messages</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.get_new_im_messages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.get_new_im_messages" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_new_im_messages</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.get_new_im_messages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.get_new_im_messages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves new IM messages for each user in self.users.
 Updates user[‘last_ts’] to ts of newest message.
 :returns: {username: [messages list]} newer than last_ts.
@@ -400,7 +398,7 @@ Updates user[‘last_ts’] to ts of newest message.
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">update</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs tasks, and checks for new messages.
 Periodically called from widget update.
 :returns: None.</p>
@@ -408,20 +406,20 @@ Periodically called from widget update.
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.help_message">
-<code class="sig-name descname">help_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.help_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.help_message" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">help_message</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.help_message"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.help_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return simple help message</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.handle_messages">
-<code class="sig-name descname">handle_messages</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">messages</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.handle_messages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.handle_messages" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">handle_messages</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.handle_messages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.handle_messages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs commands depending on messages.
 This includes adding tasks to be performed during each update.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.add_task">
-<code class="sig-name descname">add_task</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.add_task"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.add_task" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add_task</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.add_task"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.add_task" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a task to self.tasks, which will be executed during each update
 :param command: Task command.
 :param *args: Additional args for command.
@@ -436,7 +434,7 @@ This includes adding tasks to be performed during each update.</p>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.upload_latest_plot">
-<code class="sig-name descname">upload_latest_plot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.upload_latest_plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.upload_latest_plot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">upload_latest_plot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.upload_latest_plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.upload_latest_plot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uploads latest plot (if any) to slack channel.
 The latest plot is retrieved from
 <a class="reference internal" href="../plots/base.html#qcodes.plots.base.BasePlot" title="qcodes.plots.base.BasePlot"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.plots.base.BasePlot</span></code></a>, which is updated
@@ -452,7 +450,7 @@ every time a new qcodes plot is instantiated.
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.print_measurement_information">
-<code class="sig-name descname">print_measurement_information</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.print_measurement_information"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.print_measurement_information" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">print_measurement_information</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.print_measurement_information"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.print_measurement_information" title="Permalink to this definition">¶</a></dt>
 <dd><p>Prints information about the current measurement.
 Information printed is percentage complete, and dataset representation.
 Dataset is retrieved from DataSet.latest_dataset, which updates itself
@@ -468,7 +466,7 @@ every time a new dataset is created
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.check_msmt_finished">
-<code class="sig-name descname">check_msmt_finished</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.check_msmt_finished"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.check_msmt_finished" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">check_msmt_finished</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/slack.html#Slack.check_msmt_finished"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.slack.Slack.check_msmt_finished" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if the latest measurement is completed.
 :param channel: Slack channel (can also be IM channel).
 :param **kwargs: Not used.</p>
@@ -484,7 +482,7 @@ every time a new dataset is created
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.daemon">
-<em class="property">property </em><code class="sig-name descname">daemon</code><a class="headerlink" href="#qcodes.utils.slack.Slack.daemon" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">daemon</span></code><a class="headerlink" href="#qcodes.utils.slack.Slack.daemon" title="Permalink to this definition">¶</a></dt>
 <dd><p>A boolean value indicating whether this thread is a daemon thread.</p>
 <p>This must be set before start() is called, otherwise RuntimeError is
 raised. Its initial value is inherited from the creating thread; the
@@ -495,12 +493,12 @@ the main thread default to daemon = False.</p>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.getName">
-<code class="sig-name descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.Slack.getName" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">getName</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.Slack.getName" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.ident">
-<em class="property">property </em><code class="sig-name descname">ident</code><a class="headerlink" href="#qcodes.utils.slack.Slack.ident" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">ident</span></code><a class="headerlink" href="#qcodes.utils.slack.Slack.ident" title="Permalink to this definition">¶</a></dt>
 <dd><p>Thread identifier of this thread or None if it has not been started.</p>
 <p>This is a nonzero integer. See the get_ident() function. Thread
 identifiers may be recycled when a thread exits and another thread is
@@ -509,19 +507,19 @@ created. The identifier is available even after the thread has exited.</p>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.isAlive">
-<code class="sig-name descname">isAlive</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.Slack.isAlive" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">isAlive</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.Slack.isAlive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return whether the thread is alive.</p>
 <p>This method is deprecated, use is_alive() instead.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.isDaemon">
-<code class="sig-name descname">isDaemon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.Slack.isDaemon" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">isDaemon</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.Slack.isDaemon" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.is_alive">
-<code class="sig-name descname">is_alive</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.Slack.is_alive" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">is_alive</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.Slack.is_alive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return whether the thread is alive.</p>
 <p>This method returns True just before the run() method starts until just
 after the run() method terminates. The module function enumerate()
@@ -530,7 +528,7 @@ returns a list of all alive threads.</p>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.join">
-<code class="sig-name descname">join</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.Slack.join" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">join</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.Slack.join" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait until the thread terminates.</p>
 <p>This blocks the calling thread until the thread whose join() method is
 called terminates – either normally or through an unhandled exception
@@ -551,7 +549,7 @@ exception.</p>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.name">
-<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#qcodes.utils.slack.Slack.name" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#qcodes.utils.slack.Slack.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A string used for identification purposes only.</p>
 <p>It has no semantics. Multiple threads may be given the same name. The
 initial name is set by the constructor.</p>
@@ -559,12 +557,12 @@ initial name is set by the constructor.</p>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.setDaemon">
-<code class="sig-name descname">setDaemon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">daemonic</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.Slack.setDaemon" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">setDaemon</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">daemonic</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.Slack.setDaemon" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes.utils.slack.Slack.setName">
-<code class="sig-name descname">setName</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.Slack.setName" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">setName</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.utils.slack.Slack.setName" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

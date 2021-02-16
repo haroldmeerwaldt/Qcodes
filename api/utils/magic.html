@@ -33,8 +33,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
         <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -69,7 +67,7 @@
             
             
               <div class="version">
-                0.23.0.dev1+87.g5b4b0ef68a
+                0.23.0.dev1+89.g129c797d9e
               </div>
             
           
@@ -229,13 +227,13 @@
 <span id="qcodes-utils-magic"></span><h1>qcodes.utils.magic<a class="headerlink" href="#module-qcodes.utils.magic" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="qcodes.utils.magic.QCoDeSMagic">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes.utils.magic.</code><code class="sig-name descname">QCoDeSMagic</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/magic.html#QCoDeSMagic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.magic.QCoDeSMagic" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes.utils.magic.</span></code><code class="sig-name descname"><span class="pre">QCoDeSMagic</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/magic.html#QCoDeSMagic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.magic.QCoDeSMagic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://ipython.readthedocs.io/en/stable/api/generated/IPython.core.magic.html#IPython.core.magic.Magics" title="(in IPython v7.19.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">IPython.core.magic.Magics</span></code></a></p>
 <p>Magics related to code management (loading, saving, editing, …).</p>
 <p>Setup Magic. All args and kwargs are passed to super class.</p>
 <dl class="py method">
 <dt id="qcodes.utils.magic.QCoDeSMagic.measurement">
-<code class="sig-name descname">measurement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">line</span></em>, <em class="sig-param"><span class="n">cell</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/magic.html#QCoDeSMagic.measurement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.magic.QCoDeSMagic.measurement" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">measurement</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/magic.html#QCoDeSMagic.measurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.magic.QCoDeSMagic.measurement" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create <code class="docutils literal notranslate"><span class="pre">qcodes.Loop</span></code> measurement mimicking Python <code class="docutils literal notranslate"><span class="pre">for</span></code> syntax via
 iPython magic.</p>
 <p>Upon execution of a notebook cell, the code is transformed from the
@@ -289,19 +287,19 @@ Delays can be provided in a loop by adding <code class="docutils literal notrans
 
 <dl class="py attribute">
 <dt id="qcodes.utils.magic.QCoDeSMagic.magics">
-<code class="sig-name descname">magics</code><em class="property"> = {'cell': {'measurement': 'measurement'}, 'line': {'measurement': 'measurement'}}</em><a class="headerlink" href="#qcodes.utils.magic.QCoDeSMagic.magics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">magics</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'cell':</span> <span class="pre">{'measurement':</span> <span class="pre">'measurement'},</span> <span class="pre">'line':</span> <span class="pre">{'measurement':</span> <span class="pre">'measurement'}}</span></em><a class="headerlink" href="#qcodes.utils.magic.QCoDeSMagic.magics" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes.utils.magic.QCoDeSMagic.registered">
-<code class="sig-name descname">registered</code><em class="property"> = True</em><a class="headerlink" href="#qcodes.utils.magic.QCoDeSMagic.registered" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">registered</span></code><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#qcodes.utils.magic.QCoDeSMagic.registered" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
 <dt id="qcodes.utils.magic.register_magic_class">
-<code class="sig-prename descclassname">qcodes.utils.magic.</code><code class="sig-name descname">register_magic_class</code><span class="sig-paren">(</span><em class="sig-param">cls=&lt;class 'qcodes.utils.magic.QCoDeSMagic'&gt;</em>, <em class="sig-param">magic_commands=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/magic.html#register_magic_class"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.utils.magic.register_magic_class" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">qcodes.utils.magic.</span></code><code class="sig-name descname"><span class="pre">register_magic_class</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">cls=&lt;class</span> <span class="pre">'qcodes.utils.magic.QCoDeSMagic'&gt;</span></em>, <em class="sig-param"><span class="pre">magic_commands=True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/utils/magic.html#register_magic_class"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.utils.magic.register_magic_class" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers a iPython magic class.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

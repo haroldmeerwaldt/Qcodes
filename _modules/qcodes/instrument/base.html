@@ -33,8 +33,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
         <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
@@ -67,7 +65,7 @@
             
             
               <div class="version">
-                0.23.0.dev1+87.g5b4b0ef68a
+                0.23.0.dev1+89.g129c797d9e
               </div>
             
           
@@ -191,7 +189,7 @@
 <span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="InstrumentBase"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentBase">[docs]</a><span class="k">class</span> <span class="nc">InstrumentBase</span><span class="p">(</span><span class="n">Metadatable</span><span class="p">,</span> <span class="n">DelegateAttributes</span><span class="p">):</span>
+<div class="viewcode-block" id="InstrumentBase"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.InstrumentBase">[docs]</a><span class="k">class</span> <span class="nc">InstrumentBase</span><span class="p">(</span><span class="n">Metadatable</span><span class="p">,</span> <span class="n">DelegateAttributes</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Base class for all QCodes instruments and instrument channels</span>
 
@@ -241,7 +239,7 @@
         <span class="sd">&quot;&quot;&quot;Short name of the instrument&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_short_name</span>
 
-<div class="viewcode-block" id="InstrumentBase.add_parameter"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentBase.add_parameter">[docs]</a>    <span class="k">def</span> <span class="nf">add_parameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+<div class="viewcode-block" id="InstrumentBase.add_parameter"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.InstrumentBase.add_parameter">[docs]</a>    <span class="k">def</span> <span class="nf">add_parameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                       <span class="n">parameter_class</span><span class="p">:</span> <span class="nb">type</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Bind one Parameter to this instrument.</span>
@@ -271,7 +269,7 @@
         <span class="n">param</span> <span class="o">=</span> <span class="n">parameter_class</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">instrument</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">param</span></div>
 
-<div class="viewcode-block" id="InstrumentBase.add_function"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentBase.add_function">[docs]</a>    <span class="k">def</span> <span class="nf">add_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="InstrumentBase.add_function"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.InstrumentBase.add_function">[docs]</a>    <span class="k">def</span> <span class="nf">add_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Bind one ``Function`` to this instrument.</span>
 
@@ -299,7 +297,7 @@
         <span class="n">func</span> <span class="o">=</span> <span class="n">Function</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">instrument</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span></div>
 
-<div class="viewcode-block" id="InstrumentBase.add_submodule"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentBase.add_submodule">[docs]</a>    <span class="k">def</span> <span class="nf">add_submodule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+<div class="viewcode-block" id="InstrumentBase.add_submodule"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.InstrumentBase.add_submodule">[docs]</a>    <span class="k">def</span> <span class="nf">add_submodule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                       <span class="n">submodule</span><span class="p">:</span>  <span class="n">Union</span><span class="p">[</span><span class="s1">&#39;InstrumentBase&#39;</span><span class="p">,</span>
                                         <span class="s1">&#39;ChannelList&#39;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -333,7 +331,7 @@
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Submodules must be metadatable.&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">submodules</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">submodule</span></div>
 
-<div class="viewcode-block" id="InstrumentBase.snapshot_base"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentBase.snapshot_base">[docs]</a>    <span class="k">def</span> <span class="nf">snapshot_base</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">update</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<div class="viewcode-block" id="InstrumentBase.snapshot_base"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.InstrumentBase.snapshot_base">[docs]</a>    <span class="k">def</span> <span class="nf">snapshot_base</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">update</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                       <span class="n">params_to_skip_update</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
                       <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -392,7 +390,7 @@
                 <span class="n">snap</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">snap</span></div>
 
-<div class="viewcode-block" id="InstrumentBase.print_readable_snapshot"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentBase.print_readable_snapshot">[docs]</a>    <span class="k">def</span> <span class="nf">print_readable_snapshot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">update</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<div class="viewcode-block" id="InstrumentBase.print_readable_snapshot"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.InstrumentBase.print_readable_snapshot">[docs]</a>    <span class="k">def</span> <span class="nf">print_readable_snapshot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">update</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                                 <span class="n">max_chars</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">80</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Prints a readable version of the snapshot.</span>
@@ -492,14 +490,14 @@
     <span class="c1">#</span>
     <span class="n">delegate_attr_dicts</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;parameters&#39;</span><span class="p">,</span> <span class="s1">&#39;functions&#39;</span><span class="p">,</span> <span class="s1">&#39;submodules&#39;</span><span class="p">]</span>
 
-<div class="viewcode-block" id="InstrumentBase.__getitem__"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentBase.__getitem__">[docs]</a>    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">Parameter</span><span class="p">]:</span>
+<div class="viewcode-block" id="InstrumentBase.__getitem__"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.InstrumentBase.__getitem__">[docs]</a>    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">Parameter</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;Delegate instrument[&#39;name&#39;] to parameter or function &#39;name&#39;.&quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
         <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="n">key</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="InstrumentBase.set"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentBase.set">[docs]</a>    <span class="k">def</span> <span class="nf">set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="InstrumentBase.set"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.InstrumentBase.set">[docs]</a>    <span class="k">def</span> <span class="nf">set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Shortcut for setting a parameter from its name and new value.</span>
 
@@ -509,7 +507,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="n">param_name</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="InstrumentBase.get"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentBase.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<div class="viewcode-block" id="InstrumentBase.get"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.InstrumentBase.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Shortcut for getting a parameter from its name.</span>
 
@@ -521,7 +519,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="n">param_name</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="InstrumentBase.call"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentBase.call">[docs]</a>    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<div class="viewcode-block" id="InstrumentBase.call"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.InstrumentBase.call">[docs]</a>    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Shortcut for calling a function from its name.</span>
 
@@ -534,13 +532,13 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">functions</span><span class="p">[</span><span class="n">func_name</span><span class="p">]</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="InstrumentBase.__getstate__"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentBase.__getstate__">[docs]</a>    <span class="k">def</span> <span class="nf">__getstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="InstrumentBase.__getstate__"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.InstrumentBase.__getstate__">[docs]</a>    <span class="k">def</span> <span class="nf">__getstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Prevent pickling instruments, and give a nice error message.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
             <span class="sa">f</span><span class="s1">&#39;Error when pickling instrument </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">. &#39;</span>
             <span class="sa">f</span><span class="s1">&#39;QCoDeS instruments can not be pickled.&#39;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="InstrumentBase.validate_status"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentBase.validate_status">[docs]</a>    <span class="k">def</span> <span class="nf">validate_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="InstrumentBase.validate_status"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.InstrumentBase.validate_status">[docs]</a>    <span class="k">def</span> <span class="nf">validate_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot; Validate the values of all gettable parameters</span>
 
 <span class="sd">        The validation is done for all parameters that have both a get and</span>
@@ -559,16 +557,16 @@
                 <span class="n">p</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="AbstractInstrument"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.AbstractInstrument">[docs]</a><span class="k">class</span> <span class="nc">AbstractInstrument</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+<div class="viewcode-block" id="AbstractInstrument"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.AbstractInstrument">[docs]</a><span class="k">class</span> <span class="nc">AbstractInstrument</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;ABC that is useful for defining mixin classes for Instrument class&quot;&quot;&quot;</span>
     <span class="n">log</span><span class="p">:</span> <span class="s1">&#39;InstrumentLoggerAdapter&#39;</span>  <span class="c1"># instrument logging</span>
 
-<div class="viewcode-block" id="AbstractInstrument.ask"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.AbstractInstrument.ask">[docs]</a>    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="AbstractInstrument.ask"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.AbstractInstrument.ask">[docs]</a>    <span class="nd">@abstractmethod</span>
     <span class="k">def</span> <span class="nf">ask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="k">pass</span></div></div>
 
 
-<div class="viewcode-block" id="Instrument"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument">[docs]</a><span class="k">class</span> <span class="nc">Instrument</span><span class="p">(</span><span class="n">InstrumentBase</span><span class="p">,</span> <span class="n">AbstractInstrument</span><span class="p">):</span>
+<div class="viewcode-block" id="Instrument"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument">[docs]</a><span class="k">class</span> <span class="nc">Instrument</span><span class="p">(</span><span class="n">InstrumentBase</span><span class="p">,</span> <span class="n">AbstractInstrument</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Base class for all QCodes instruments.</span>
@@ -598,7 +596,7 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">record_instance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Instrument.get_idn"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.get_idn">[docs]</a>    <span class="k">def</span> <span class="nf">get_idn</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+<div class="viewcode-block" id="Instrument.get_idn"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.get_idn">[docs]</a>    <span class="k">def</span> <span class="nf">get_idn</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Parse a standard VISA ``*IDN?`` response into an ID dict.</span>
 
@@ -640,7 +638,7 @@
 
         <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">((</span><span class="s1">&#39;vendor&#39;</span><span class="p">,</span> <span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="s1">&#39;serial&#39;</span><span class="p">,</span> <span class="s1">&#39;firmware&#39;</span><span class="p">),</span> <span class="n">idparts</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Instrument.connect_message"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.connect_message">[docs]</a>    <span class="k">def</span> <span class="nf">connect_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idn_param</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;IDN&#39;</span><span class="p">,</span>
+<div class="viewcode-block" id="Instrument.connect_message"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.connect_message">[docs]</a>    <span class="k">def</span> <span class="nf">connect_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idn_param</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;IDN&#39;</span><span class="p">,</span>
                         <span class="n">begin_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Print a standard message on initial connection to an instrument.</span>
@@ -664,18 +662,18 @@
         <span class="nb">print</span><span class="p">(</span><span class="n">con_msg</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Connected to instrument: </span><span class="si">{</span><span class="n">idn</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Instrument.__repr__"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.__repr__">[docs]</a>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="viewcode-block" id="Instrument.__repr__"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.__repr__">[docs]</a>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Simplified repr giving just the class and name.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="s1">&#39;&lt;</span><span class="si">{}</span><span class="s1">: </span><span class="si">{}</span><span class="s1">&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Instrument.__del__"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.__del__">[docs]</a>    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Instrument.__del__"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.__del__">[docs]</a>    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Close the instrument and remove its instance record.&quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
         <span class="k">except</span> <span class="ne">BaseException</span><span class="p">:</span>
             <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="Instrument.close"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Instrument.close"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Irreversibly stop this instrument and free its resources.</span>
 
@@ -688,7 +686,7 @@
         <span class="n">strip_attrs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">whitelist</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;_name&#39;</span><span class="p">])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">remove_instance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Instrument.close_all"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.close_all">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="Instrument.close_all"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.close_all">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">close_all</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Try to close all instruments registered in</span>
@@ -709,7 +707,7 @@
                 <span class="n">log</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to close </span><span class="si">{</span><span class="n">inststr</span><span class="si">}</span><span class="s2">, ignored&quot;</span><span class="p">)</span>
                 <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="Instrument.record_instance"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.record_instance">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="Instrument.record_instance"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.record_instance">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">record_instance</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">instance</span><span class="p">:</span> <span class="s1">&#39;Instrument&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Record (a weak ref to) an instance in a class&#39;s instance list.</span>
@@ -740,7 +738,7 @@
             <span class="bp">cls</span><span class="o">.</span><span class="n">_instances</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">cls</span><span class="o">.</span><span class="n">_instances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">wr</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Instrument.instances"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.instances">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="Instrument.instances"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.instances">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">instances</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s1">&#39;Instrument&#39;</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get all currently defined instances of this instrument class.</span>
@@ -757,7 +755,7 @@
             <span class="k">return</span> <span class="p">[]</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">wr</span><span class="p">()</span> <span class="k">for</span> <span class="n">wr</span> <span class="ow">in</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s1">&#39;_instances&#39;</span><span class="p">,</span> <span class="p">[])</span> <span class="k">if</span> <span class="n">wr</span><span class="p">()]</span></div>
 
-<div class="viewcode-block" id="Instrument.remove_instance"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.remove_instance">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="Instrument.remove_instance"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.remove_instance">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">remove_instance</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">instance</span><span class="p">:</span> <span class="s1">&#39;Instrument&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Remove a particular instance from the record.</span>
@@ -776,7 +774,7 @@
             <span class="k">if</span> <span class="n">ref</span> <span class="ow">is</span> <span class="n">wr</span><span class="p">:</span>
                 <span class="k">del</span> <span class="n">all_ins</span><span class="p">[</span><span class="n">name</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="Instrument.find_instrument"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.find_instrument">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="Instrument.find_instrument"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.find_instrument">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">find_instrument</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                         <span class="n">instrument_class</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">type</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Instrument&#39;</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -808,7 +806,7 @@
 
         <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="s1">&#39;Instrument&#39;</span><span class="p">,</span> <span class="n">ins</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Instrument.exist"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.exist">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="Instrument.exist"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.exist">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">exist</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">instrument_class</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">type</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Check if an instrument with a given names exists (i.e. is already</span>
@@ -836,7 +834,7 @@
 
         <span class="k">return</span> <span class="n">instrument_exists</span></div>
 
-<div class="viewcode-block" id="Instrument.is_valid"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.is_valid">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="Instrument.is_valid"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.is_valid">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">is_valid</span><span class="p">(</span><span class="n">instr_instance</span><span class="p">:</span> <span class="s1">&#39;Instrument&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Check if a given instance of an instrument is valid: if an instrument</span>
@@ -858,7 +856,7 @@
     <span class="c1"># `write` and `ask` are standard wrappers to help with error reporting   #</span>
     <span class="c1">#</span>
 
-<div class="viewcode-block" id="Instrument.write"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.write">[docs]</a>    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Instrument.write"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.write">[docs]</a>    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Write a command string with NO response to the hardware.</span>
 
@@ -880,7 +878,7 @@
             <span class="n">e</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">args</span> <span class="o">+</span> <span class="p">(</span><span class="s1">&#39;writing &#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; to &#39;</span> <span class="o">+</span> <span class="n">inst</span><span class="p">,)</span>
             <span class="k">raise</span> <span class="n">e</span></div>
 
-<div class="viewcode-block" id="Instrument.write_raw"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.write_raw">[docs]</a>    <span class="k">def</span> <span class="nf">write_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Instrument.write_raw"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.write_raw">[docs]</a>    <span class="k">def</span> <span class="nf">write_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Low level method to write a command string to the hardware.</span>
 
@@ -895,7 +893,7 @@
             <span class="s1">&#39;Instrument </span><span class="si">{}</span><span class="s1"> has not defined a write method&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
                 <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Instrument.ask"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.ask">[docs]</a>    <span class="k">def</span> <span class="nf">ask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="viewcode-block" id="Instrument.ask"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.ask">[docs]</a>    <span class="k">def</span> <span class="nf">ask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Write a command string to the hardware and return a response.</span>
 
@@ -923,7 +921,7 @@
             <span class="n">e</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">args</span> <span class="o">+</span> <span class="p">(</span><span class="s1">&#39;asking &#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; to &#39;</span> <span class="o">+</span> <span class="n">inst</span><span class="p">,)</span>
             <span class="k">raise</span> <span class="n">e</span></div>
 
-<div class="viewcode-block" id="Instrument.ask_raw"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.Instrument.ask_raw">[docs]</a>    <span class="k">def</span> <span class="nf">ask_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="viewcode-block" id="Instrument.ask_raw"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.Instrument.ask_raw">[docs]</a>    <span class="k">def</span> <span class="nf">ask_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Low level method to write to the hardware and return a response.</span>
 
@@ -939,7 +937,7 @@
                 <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span></div></div>
 
 
-<div class="viewcode-block" id="find_or_create_instrument"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.find_or_create_instrument">[docs]</a><span class="k">def</span> <span class="nf">find_or_create_instrument</span><span class="p">(</span><span class="n">instrument_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Instrument</span><span class="p">],</span>
+<div class="viewcode-block" id="find_or_create_instrument"><a class="viewcode-back" href="../../../api/instrument/base.html#qcodes.instrument.base.find_or_create_instrument">[docs]</a><span class="k">def</span> <span class="nf">find_or_create_instrument</span><span class="p">(</span><span class="n">instrument_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Instrument</span><span class="p">],</span>
                               <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                               <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
                               <span class="n">recreate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>

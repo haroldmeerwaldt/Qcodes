@@ -33,8 +33,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
         <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
@@ -67,7 +65,7 @@
             
             
               <div class="version">
-                0.23.0.dev1+87.g5b4b0ef68a
+                0.23.0.dev1+89.g129c797d9e
               </div>
             
           
@@ -194,12 +192,12 @@
 <span class="n">RunId</span> <span class="o">=</span> <span class="n">NewType</span><span class="p">(</span><span class="s1">&#39;RunId&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="Metadatable"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.instrument_drivers.devices.Metadatable">[docs]</a><span class="k">class</span> <span class="nc">Metadatable</span><span class="p">:</span>
+<div class="viewcode-block" id="Metadatable"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.utils.metadata.Metadatable">[docs]</a><span class="k">class</span> <span class="nc">Metadatable</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">load_metadata</span><span class="p">(</span><span class="n">metadata</span> <span class="ow">or</span> <span class="p">{})</span>
 
-<div class="viewcode-block" id="Metadatable.load_metadata"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.instrument_drivers.devices.Metadatable.load_metadata">[docs]</a>    <span class="k">def</span> <span class="nf">load_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metadata</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="Metadatable.load_metadata"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.utils.metadata.Metadatable.load_metadata">[docs]</a>    <span class="k">def</span> <span class="nf">load_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metadata</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Load metadata into this classes metadata dictionary.</span>
 
@@ -208,7 +206,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">deep_update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">,</span> <span class="n">metadata</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Metadatable.snapshot"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.instrument_drivers.devices.Metadatable.snapshot">[docs]</a>    <span class="k">def</span> <span class="nf">snapshot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">update</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<div class="viewcode-block" id="Metadatable.snapshot"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.utils.metadata.Metadatable.snapshot">[docs]</a>    <span class="k">def</span> <span class="nf">snapshot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">update</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Decorate a snapshot dictionary with metadata.</span>
 <span class="sd">        DO NOT override this method if you want metadata in the snapshot</span>
@@ -228,7 +226,7 @@
 
         <span class="k">return</span> <span class="n">snap</span></div>
 
-<div class="viewcode-block" id="Metadatable.snapshot_base"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.instrument_drivers.devices.Metadatable.snapshot_base">[docs]</a>    <span class="k">def</span> <span class="nf">snapshot_base</span><span class="p">(</span>
+<div class="viewcode-block" id="Metadatable.snapshot_base"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.utils.metadata.Metadatable.snapshot_base">[docs]</a>    <span class="k">def</span> <span class="nf">snapshot_base</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">update</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">params_to_skip_update</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
@@ -238,7 +236,7 @@
         <span class="k">return</span> <span class="p">{}</span></div></div>
 
 
-<div class="viewcode-block" id="ParameterDiff"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.instrument_drivers.devices.ParameterDiff">[docs]</a><span class="k">class</span> <span class="nc">ParameterDiff</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
+<div class="viewcode-block" id="ParameterDiff"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.utils.metadata.ParameterDiff">[docs]</a><span class="k">class</span> <span class="nc">ParameterDiff</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
     <span class="c1"># Cannot be generic in Python &lt; 3.7:</span>
     <span class="c1"># https://stackoverflow.com/questions/50530959/generic-namedtuple-in-python-3-6</span>
     <span class="n">left_only</span><span class="p">:</span> <span class="n">ParameterDict</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span>
@@ -247,7 +245,7 @@
 
 <span class="c1">## FUNCTIONS ##</span>
 
-<div class="viewcode-block" id="extract_param_values"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.instrument_drivers.devices.extract_param_values">[docs]</a><span class="k">def</span> <span class="nf">extract_param_values</span><span class="p">(</span><span class="n">snapshot</span><span class="p">:</span> <span class="n">Snapshot</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">ParameterKey</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<div class="viewcode-block" id="extract_param_values"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.utils.metadata.extract_param_values">[docs]</a><span class="k">def</span> <span class="nf">extract_param_values</span><span class="p">(</span><span class="n">snapshot</span><span class="p">:</span> <span class="n">Snapshot</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">ParameterKey</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given a snapshot, returns a dictionary from</span>
 <span class="sd">    instrument and parameter names onto parameter values.</span>
@@ -266,7 +264,7 @@
 
 
 
-<div class="viewcode-block" id="diff_param_values"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.instrument_drivers.devices.diff_param_values">[docs]</a><span class="k">def</span> <span class="nf">diff_param_values</span><span class="p">(</span><span class="n">left_snapshot</span><span class="p">:</span> <span class="n">Snapshot</span><span class="p">,</span>
+<div class="viewcode-block" id="diff_param_values"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.utils.metadata.diff_param_values">[docs]</a><span class="k">def</span> <span class="nf">diff_param_values</span><span class="p">(</span><span class="n">left_snapshot</span><span class="p">:</span> <span class="n">Snapshot</span><span class="p">,</span>
                       <span class="n">right_snapshot</span><span class="p">:</span> <span class="n">Snapshot</span>
                       <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ParameterDiff</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -294,7 +292,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="diff_param_values_by_id"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.instrument_drivers.devices.diff_param_values_by_id">[docs]</a><span class="k">def</span> <span class="nf">diff_param_values_by_id</span><span class="p">(</span><span class="n">left_id</span><span class="p">:</span> <span class="n">RunId</span><span class="p">,</span> <span class="n">right_id</span><span class="p">:</span> <span class="n">RunId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ParameterDiff</span><span class="p">:</span>
+<div class="viewcode-block" id="diff_param_values_by_id"><a class="viewcode-back" href="../../../api/utils/metadata.html#qcodes.utils.metadata.diff_param_values_by_id">[docs]</a><span class="k">def</span> <span class="nf">diff_param_values_by_id</span><span class="p">(</span><span class="n">left_id</span><span class="p">:</span> <span class="n">RunId</span><span class="p">,</span> <span class="n">right_id</span><span class="p">:</span> <span class="n">RunId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ParameterDiff</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given the IDs of two datasets, returns the differences between</span>
 <span class="sd">    parameter values in each of their snapshots.</span>

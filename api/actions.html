@@ -33,8 +33,6 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
         <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -69,7 +67,7 @@
             
             
               <div class="version">
-                0.23.0.dev1+87.g5b4b0ef68a
+                0.23.0.dev1+89.g129c797d9e
               </div>
             
           
@@ -213,16 +211,16 @@
 <p>Actions, mainly to be executed in measurement Loops.</p>
 <dl class="py exception">
 <dt id="qcodes.actions.UnsafeThreadingException">
-<em class="property">exception </em><code class="sig-prename descclassname">qcodes.actions.</code><code class="sig-name descname">UnsafeThreadingException</code><a class="reference internal" href="../_modules/qcodes/actions.html#UnsafeThreadingException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.actions.UnsafeThreadingException" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes.actions.</span></code><code class="sig-name descname"><span class="pre">UnsafeThreadingException</span></code><a class="reference internal" href="../_modules/qcodes/actions.html#UnsafeThreadingException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.actions.UnsafeThreadingException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#Exception" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 <dl class="py attribute">
 <dt id="qcodes.actions.UnsafeThreadingException.args">
-<code class="sig-name descname">args</code><a class="headerlink" href="#qcodes.actions.UnsafeThreadingException.args" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">args</span></code><a class="headerlink" href="#qcodes.actions.UnsafeThreadingException.args" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes.actions.UnsafeThreadingException.with_traceback">
-<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.actions.UnsafeThreadingException.with_traceback" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">with_traceback</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qcodes.actions.UnsafeThreadingException.with_traceback" title="Permalink to this definition">¶</a></dt>
 <dd><p>Exception.with_traceback(tb) –
 set self.__traceback__ to tb and return self.</p>
 </dd></dl>
@@ -231,7 +229,7 @@ set self.__traceback__ to tb and return self.</p>
 
 <dl class="py class">
 <dt id="qcodes.actions.Task">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes.actions.</code><code class="sig-name descname">Task</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qcodes/actions.html#Task"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.actions.Task" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes.actions.</span></code><code class="sig-name descname"><span class="pre">Task</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qcodes/actions.html#Task"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.actions.Task" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>A predefined task to be executed within a measurement Loop.</p>
 <p>The first argument should be a callable, to which any subsequent
@@ -250,7 +248,7 @@ but are accepted for compatibility with other things happening in a Loop.</p>
 </dl>
 <dl class="py method">
 <dt id="qcodes.actions.Task.snapshot">
-<code class="sig-name descname">snapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">update</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qcodes/actions.html#Task.snapshot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.actions.Task.snapshot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">snapshot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qcodes/actions.html#Task.snapshot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.actions.Task.snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Snapshots  task
 :param update: TODO not in use
 :type update: bool</p>
@@ -268,7 +266,7 @@ but are accepted for compatibility with other things happening in a Loop.</p>
 
 <dl class="py class">
 <dt id="qcodes.actions.Wait">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes.actions.</code><code class="sig-name descname">Wait</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">delay</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qcodes/actions.html#Wait"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.actions.Wait" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes.actions.</span></code><code class="sig-name descname"><span class="pre">Wait</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qcodes/actions.html#Wait"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.actions.Wait" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>A simple class to tell a Loop to wait &lt;delay&gt; seconds.</p>
 <p>This is transformed into a Task within the Loop, such that
@@ -284,7 +282,7 @@ it can do other things (monitor, check for halt) during the delay.</p>
 </dl>
 <dl class="py method">
 <dt id="qcodes.actions.Wait.snapshot">
-<code class="sig-name descname">snapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">update</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qcodes/actions.html#Wait.snapshot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.actions.Wait.snapshot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">snapshot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qcodes/actions.html#Wait.snapshot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.actions.Wait.snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Snapshots  delay
 :param update: TODO not in use
 :type update: bool</p>
@@ -302,7 +300,7 @@ it can do other things (monitor, check for halt) during the delay.</p>
 
 <dl class="py class">
 <dt id="qcodes.actions.BreakIf">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes.actions.</code><code class="sig-name descname">BreakIf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">condition</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qcodes/actions.html#BreakIf"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.actions.BreakIf" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes.actions.</span></code><code class="sig-name descname"><span class="pre">BreakIf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">condition</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qcodes/actions.html#BreakIf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.actions.BreakIf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Loop action that breaks out of the loop if a condition is truthy.</p>
 <dl class="field-list simple">
@@ -320,7 +318,7 @@ Can be a simple function that returns truthy when it’s time to quit</p>
 </div>
 <dl class="py method">
 <dt id="qcodes.actions.BreakIf.snapshot">
-<code class="sig-name descname">snapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">update</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qcodes/actions.html#BreakIf.snapshot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.actions.BreakIf.snapshot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">snapshot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/qcodes/actions.html#BreakIf.snapshot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.actions.BreakIf.snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Snapshots breakif action
 :param update: TODO not in use
 :type update: bool</p>

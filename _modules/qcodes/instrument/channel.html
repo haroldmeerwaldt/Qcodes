@@ -33,8 +33,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
         <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
@@ -67,7 +65,7 @@
             
             
               <div class="version">
-                0.23.0.dev1+87.g5b4b0ef68a
+                0.23.0.dev1+89.g129c797d9e
               </div>
             
           
@@ -182,7 +180,7 @@
 <span class="kn">from</span> <span class="nn">..utils.helpers</span> <span class="kn">import</span> <span class="n">full_class</span>
 
 
-<div class="viewcode-block" id="InstrumentChannel"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentChannel">[docs]</a><span class="k">class</span> <span class="nc">InstrumentChannel</span><span class="p">(</span><span class="n">InstrumentBase</span><span class="p">):</span>
+<div class="viewcode-block" id="InstrumentChannel"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel">[docs]</a><span class="k">class</span> <span class="nc">InstrumentChannel</span><span class="p">(</span><span class="n">InstrumentBase</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Base class for a channel in an instrument</span>
 
@@ -211,7 +209,7 @@
         <span class="c1"># full_name, or short_name.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">_</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
 
-<div class="viewcode-block" id="InstrumentChannel.__repr__"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentChannel.__repr__">[docs]</a>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="viewcode-block" id="InstrumentChannel.__repr__"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel.__repr__">[docs]</a>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Custom repr to give parent information&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="s1">&#39;&lt;</span><span class="si">{}</span><span class="s1">: </span><span class="si">{}</span><span class="s1"> of </span><span class="si">{}</span><span class="s1">: </span><span class="si">{}</span><span class="s1">&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span>
                                            <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
@@ -219,16 +217,16 @@
                                            <span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
 
     <span class="c1"># Pass any commands to read or write from the instrument up to the parent</span>
-<div class="viewcode-block" id="InstrumentChannel.write"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentChannel.write">[docs]</a>    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="InstrumentChannel.write"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel.write">[docs]</a>    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="InstrumentChannel.write_raw"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentChannel.write_raw">[docs]</a>    <span class="k">def</span> <span class="nf">write_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="InstrumentChannel.write_raw"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel.write_raw">[docs]</a>    <span class="k">def</span> <span class="nf">write_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">write_raw</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="InstrumentChannel.ask"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentChannel.ask">[docs]</a>    <span class="k">def</span> <span class="nf">ask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="viewcode-block" id="InstrumentChannel.ask"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel.ask">[docs]</a>    <span class="k">def</span> <span class="nf">ask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">ask</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="InstrumentChannel.ask_raw"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.InstrumentChannel.ask_raw">[docs]</a>    <span class="k">def</span> <span class="nf">ask_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="viewcode-block" id="InstrumentChannel.ask_raw"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel.ask_raw">[docs]</a>    <span class="k">def</span> <span class="nf">ask_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">ask_raw</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
@@ -246,7 +244,7 @@
         <span class="k">return</span> <span class="n">name_parts</span></div>
 
 
-<div class="viewcode-block" id="MultiChannelInstrumentParameter"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.MultiChannelInstrumentParameter">[docs]</a><span class="k">class</span> <span class="nc">MultiChannelInstrumentParameter</span><span class="p">(</span><span class="n">MultiParameter</span><span class="p">):</span>
+<div class="viewcode-block" id="MultiChannelInstrumentParameter"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.MultiChannelInstrumentParameter">[docs]</a><span class="k">class</span> <span class="nc">MultiChannelInstrumentParameter</span><span class="p">(</span><span class="n">MultiParameter</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Parameter to get or set multiple channels simultaneously.</span>
 
@@ -266,7 +264,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_channels</span> <span class="o">=</span> <span class="n">channels</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_param_name</span> <span class="o">=</span> <span class="n">param_name</span>
 
-<div class="viewcode-block" id="MultiChannelInstrumentParameter.get_raw"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.MultiChannelInstrumentParameter.get_raw">[docs]</a>    <span class="k">def</span> <span class="nf">get_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">ParamRawDataType</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
+<div class="viewcode-block" id="MultiChannelInstrumentParameter.get_raw"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.MultiChannelInstrumentParameter.get_raw">[docs]</a>    <span class="k">def</span> <span class="nf">get_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">ParamRawDataType</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return a tuple containing the data from each of the channels in the</span>
 <span class="sd">        list.</span>
@@ -274,7 +272,7 @@
         <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">chan</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_param_name</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">()</span> <span class="k">for</span> <span class="n">chan</span>
                      <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_channels</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="MultiChannelInstrumentParameter.set_raw"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.MultiChannelInstrumentParameter.set_raw">[docs]</a>    <span class="k">def</span> <span class="nf">set_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">ParamRawDataType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="MultiChannelInstrumentParameter.set_raw"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.MultiChannelInstrumentParameter.set_raw">[docs]</a>    <span class="k">def</span> <span class="nf">set_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">ParamRawDataType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set all parameters to this value.</span>
 
@@ -296,7 +294,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">names</span></div>
 
 
-<div class="viewcode-block" id="ChannelList"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelList">[docs]</a><span class="k">class</span> <span class="nc">ChannelList</span><span class="p">(</span><span class="n">Metadatable</span><span class="p">):</span>
+<div class="viewcode-block" id="ChannelList"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelList">[docs]</a><span class="k">class</span> <span class="nc">ChannelList</span><span class="p">(</span><span class="n">Metadatable</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Container for channelized parameters that allows for sweeps over</span>
 <span class="sd">    all channels, as well as addressing of individual channels.</span>
@@ -376,7 +374,7 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;All items in this channel list must be of &quot;</span>
                                 <span class="s2">&quot;type </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">chan_type</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span>
 
-<div class="viewcode-block" id="ChannelList.__getitem__"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelList.__getitem__">[docs]</a>    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">slice</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]])</span> <span class="o">-&gt;</span> \
+<div class="viewcode-block" id="ChannelList.__getitem__"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelList.__getitem__">[docs]</a>    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">slice</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]])</span> <span class="o">-&gt;</span> \
             <span class="n">Union</span><span class="p">[</span><span class="s1">&#39;InstrumentChannel&#39;</span><span class="p">,</span> <span class="s1">&#39;ChannelList&#39;</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return either a single channel, or a new :class:`ChannelList`</span>
@@ -407,7 +405,7 @@
                                                     <span class="bp">self</span><span class="o">.</span><span class="n">_chan_type</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span>
                                                     <span class="bp">self</span><span class="o">.</span><span class="n">_channels</span><span class="p">)</span>
 
-<div class="viewcode-block" id="ChannelList.__add__"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelList.__add__">[docs]</a>    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s1">&#39;ChannelList&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;ChannelList&#39;</span><span class="p">:</span>
+<div class="viewcode-block" id="ChannelList.__add__"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelList.__add__">[docs]</a>    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s1">&#39;ChannelList&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;ChannelList&#39;</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return a new channel list containing the channels from both</span>
 <span class="sd">        :class:`ChannelList` self and r.</span>
@@ -435,7 +433,7 @@
         <span class="k">return</span> <span class="n">ChannelList</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chan_type</span><span class="p">,</span>
                            <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_channels</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">_channels</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="ChannelList.append"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelList.append">[docs]</a>    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">InstrumentChannel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="ChannelList.append"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelList.append">[docs]</a>    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">InstrumentChannel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Append a Channel to this list. Requires that the ChannelList is not</span>
 <span class="sd">        locked and that the channel is of the same type as the ones in the list.</span>
@@ -454,7 +452,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_channels</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="n">InstrumentChannel</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_channels</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_channels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ChannelList.clear"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelList.clear">[docs]</a>    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="ChannelList.clear"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelList.clear">[docs]</a>    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Clear all items from the channel list.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -465,7 +463,7 @@
         <span class="n">channels</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_channel_mapping</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="ChannelList.remove"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelList.remove">[docs]</a>    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">InstrumentChannel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="ChannelList.remove"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelList.remove">[docs]</a>    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">InstrumentChannel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Removes obj from channellist if not locked.</span>
 
@@ -479,7 +477,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_channels</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_channel_mapping</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">short_name</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ChannelList.extend"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelList.extend">[docs]</a>    <span class="k">def</span> <span class="nf">extend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">objects</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">InstrumentChannel</span><span class="p">],</span>
+<div class="viewcode-block" id="ChannelList.extend"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelList.extend">[docs]</a>    <span class="k">def</span> <span class="nf">extend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">objects</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">InstrumentChannel</span><span class="p">],</span>
                                     <span class="s1">&#39;ChannelList&#39;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Insert an iterable of objects into the list of channels.</span>
@@ -503,7 +501,7 @@
         <span class="p">})</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_channels</span> <span class="o">=</span> <span class="n">channels</span></div>
 
-<div class="viewcode-block" id="ChannelList.index"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelList.index">[docs]</a>    <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">InstrumentChannel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<div class="viewcode-block" id="ChannelList.index"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelList.index">[docs]</a>    <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">InstrumentChannel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the index of the given object</span>
 
@@ -512,7 +510,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_channels</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ChannelList.insert"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelList.insert">[docs]</a>    <span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">InstrumentChannel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="ChannelList.insert"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelList.insert">[docs]</a>    <span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">InstrumentChannel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Insert an object into the channel list at a specific index.</span>
 
@@ -531,7 +529,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_channels</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="n">InstrumentChannel</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_channels</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_channels</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ChannelList.get_validator"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelList.get_validator">[docs]</a>    <span class="k">def</span> <span class="nf">get_validator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;ChannelListValidator&#39;</span><span class="p">:</span>
+<div class="viewcode-block" id="ChannelList.get_validator"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelList.get_validator">[docs]</a>    <span class="k">def</span> <span class="nf">get_validator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;ChannelListValidator&#39;</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a validator that checks that the returned object is a channel</span>
 <span class="sd">        in this channel list</span>
@@ -541,7 +539,7 @@
                                  <span class="s2">&quot;channel list&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">ChannelListValidator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ChannelList.lock"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelList.lock">[docs]</a>    <span class="k">def</span> <span class="nf">lock</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="ChannelList.lock"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelList.lock">[docs]</a>    <span class="k">def</span> <span class="nf">lock</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Lock the channel list. Once this is done, the channel list is</span>
 <span class="sd">        converted to a tuple and any future changes to the list are prevented.</span>
@@ -552,7 +550,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_channels</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_channels</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="ChannelList.snapshot_base"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelList.snapshot_base">[docs]</a>    <span class="k">def</span> <span class="nf">snapshot_base</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">update</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<div class="viewcode-block" id="ChannelList.snapshot_base"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelList.snapshot_base">[docs]</a>    <span class="k">def</span> <span class="nf">snapshot_base</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">update</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                       <span class="n">params_to_skip_update</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
                       <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -587,7 +585,7 @@
                     <span class="p">}</span>
         <span class="k">return</span> <span class="n">snap</span></div>
 
-<div class="viewcode-block" id="ChannelList.__getattr__"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelList.__getattr__">[docs]</a>    <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">MultiChannelInstrumentParameter</span><span class="p">,</span>
+<div class="viewcode-block" id="ChannelList.__getattr__"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelList.__getattr__">[docs]</a>    <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">MultiChannelInstrumentParameter</span><span class="p">,</span>
                                               <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span>
                                               <span class="n">InstrumentChannel</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -678,7 +676,7 @@
             <span class="n">names</span> <span class="o">+=</span> <span class="p">[</span><span class="n">channel</span><span class="o">.</span><span class="n">short_name</span> <span class="k">for</span> <span class="n">channel</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_channels</span><span class="p">]</span>
         <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">names</span><span class="p">))</span>
 
-<div class="viewcode-block" id="ChannelList.print_readable_snapshot"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelList.print_readable_snapshot">[docs]</a>    <span class="k">def</span> <span class="nf">print_readable_snapshot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">update</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<div class="viewcode-block" id="ChannelList.print_readable_snapshot"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelList.print_readable_snapshot">[docs]</a>    <span class="k">def</span> <span class="nf">print_readable_snapshot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">update</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                                 <span class="n">max_chars</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">80</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_snapshotable</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">channel</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_channels</span><span class="p">:</span>
@@ -686,7 +684,7 @@
                                                 <span class="n">max_chars</span><span class="o">=</span><span class="n">max_chars</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="ChannelListValidator"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelListValidator">[docs]</a><span class="k">class</span> <span class="nc">ChannelListValidator</span><span class="p">(</span><span class="n">Validator</span><span class="p">[</span><span class="n">InstrumentChannel</span><span class="p">]):</span>
+<div class="viewcode-block" id="ChannelListValidator"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelListValidator">[docs]</a><span class="k">class</span> <span class="nc">ChannelListValidator</span><span class="p">(</span><span class="n">Validator</span><span class="p">[</span><span class="n">InstrumentChannel</span><span class="p">]):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A validator that checks that the returned object is a member of the</span>
 <span class="sd">    channel list with which the validator was constructed.</span>
@@ -710,7 +708,7 @@
                                  <span class="s2">&quot;be used to create a validator&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_channel_list</span> <span class="o">=</span> <span class="n">channel_list</span>
 
-<div class="viewcode-block" id="ChannelListValidator.validate"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.ChannelListValidator.validate">[docs]</a>    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">InstrumentChannel</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="ChannelListValidator.validate"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.ChannelListValidator.validate">[docs]</a>    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">InstrumentChannel</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks to see that value is a member of the channel list referenced by</span>
 <span class="sd">        this validator</span>
@@ -727,7 +725,7 @@
                     <span class="nb">repr</span><span class="p">(</span><span class="n">value</span><span class="p">),</span> <span class="n">context</span><span class="p">))</span></div></div>
 
 
-<div class="viewcode-block" id="AutoLoadableInstrumentChannel"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.AutoLoadableInstrumentChannel">[docs]</a><span class="k">class</span> <span class="nc">AutoLoadableInstrumentChannel</span><span class="p">(</span><span class="n">InstrumentChannel</span><span class="p">):</span>
+<div class="viewcode-block" id="AutoLoadableInstrumentChannel"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.AutoLoadableInstrumentChannel">[docs]</a><span class="k">class</span> <span class="nc">AutoLoadableInstrumentChannel</span><span class="p">(</span><span class="n">InstrumentChannel</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This subclass provides extensions to auto-load channels</span>
 <span class="sd">    from instruments and adds methods to create and delete</span>
@@ -737,7 +735,7 @@
 <span class="sd">    these sub-modules can be created and deleted at will.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="AutoLoadableInstrumentChannel.load_from_instrument"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.AutoLoadableInstrumentChannel.load_from_instrument">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="AutoLoadableInstrumentChannel.load_from_instrument"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.AutoLoadableInstrumentChannel.load_from_instrument">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">load_from_instrument</span><span class="p">(</span>
             <span class="bp">cls</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">Instrument</span><span class="p">,</span>
             <span class="n">channel_list</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s1">&#39;AutoLoadableChannelList&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -787,7 +785,7 @@
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
             <span class="s2">&quot;Please subclass and implement this method in the subclass&quot;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="AutoLoadableInstrumentChannel.new_instance"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.AutoLoadableInstrumentChannel.new_instance">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="AutoLoadableInstrumentChannel.new_instance"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.AutoLoadableInstrumentChannel.new_instance">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">new_instance</span><span class="p">(</span>
             <span class="bp">cls</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">Instrument</span><span class="p">,</span> <span class="n">create_on_instrument</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
             <span class="n">channel_list</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s1">&#39;AutoLoadableChannelList&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -891,7 +889,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_exists_on_instrument</span> <span class="o">=</span> <span class="n">exists_on_instrument</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_channel_list</span> <span class="o">=</span> <span class="n">channel_list</span>
 
-<div class="viewcode-block" id="AutoLoadableInstrumentChannel.create"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.AutoLoadableInstrumentChannel.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="AutoLoadableInstrumentChannel.create"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.AutoLoadableInstrumentChannel.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Create the channel on the instrument&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exists_on_instrument</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Channel already exists on instrument&quot;</span><span class="p">)</span>
@@ -908,7 +906,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Please subclass&quot;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="AutoLoadableInstrumentChannel.remove"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.AutoLoadableInstrumentChannel.remove">[docs]</a>    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="AutoLoadableInstrumentChannel.remove"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.AutoLoadableInstrumentChannel.remove">[docs]</a>    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Delete the channel from the instrument and remove from channel list</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -929,14 +927,14 @@
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
                 <span class="s2">&quot;Object does not exist (anymore) on the instrument&quot;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="AutoLoadableInstrumentChannel.write"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.AutoLoadableInstrumentChannel.write">[docs]</a>    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="AutoLoadableInstrumentChannel.write"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.AutoLoadableInstrumentChannel.write">[docs]</a>    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Write to the instrument only if the channel is present on the instrument</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_assert_existence</span><span class="p">()</span>
         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="AutoLoadableInstrumentChannel.ask"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.AutoLoadableInstrumentChannel.ask">[docs]</a>    <span class="k">def</span> <span class="nf">ask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="viewcode-block" id="AutoLoadableInstrumentChannel.ask"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.AutoLoadableInstrumentChannel.ask">[docs]</a>    <span class="k">def</span> <span class="nf">ask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Ask the instrument only if the channel is present on the instrument</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -948,7 +946,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exists_on_instrument</span></div>
 
 
-<div class="viewcode-block" id="AutoLoadableChannelList"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.AutoLoadableChannelList">[docs]</a><span class="k">class</span> <span class="nc">AutoLoadableChannelList</span><span class="p">(</span><span class="n">ChannelList</span><span class="p">):</span>
+<div class="viewcode-block" id="AutoLoadableChannelList"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.AutoLoadableChannelList">[docs]</a><span class="k">class</span> <span class="nc">AutoLoadableChannelList</span><span class="p">(</span><span class="n">ChannelList</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Extends the QCoDeS :class:`ChannelList` class to add the following features:</span>
 <span class="sd">    - Automatically create channel objects on initialization</span>
@@ -1008,7 +1006,7 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_channels</span><span class="p">)</span>
 
-<div class="viewcode-block" id="AutoLoadableChannelList.add"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument_drivers.AimTTi.AimTTi_PL601P_channels.AutoLoadableChannelList.add">[docs]</a>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;AutoLoadableInstrumentChannel&#39;</span><span class="p">:</span>
+<div class="viewcode-block" id="AutoLoadableChannelList.add"><a class="viewcode-back" href="../../../api/instrument/channel.html#qcodes.instrument.channel.AutoLoadableChannelList.add">[docs]</a>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;AutoLoadableInstrumentChannel&#39;</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add a channel to the list</span>
 

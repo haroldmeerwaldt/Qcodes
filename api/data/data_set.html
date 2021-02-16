@@ -33,8 +33,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
         <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -69,7 +67,7 @@
             
             
               <div class="version">
-                0.23.0.dev1+87.g5b4b0ef68a
+                0.23.0.dev1+89.g129c797d9e
               </div>
             
           
@@ -225,7 +223,7 @@
 <p>DataSet class and factory functions.</p>
 <dl class="py function">
 <dt id="qcodes.data.data_set.new_data">
-<code class="sig-prename descclassname">qcodes.data.data_set.</code><code class="sig-name descname">new_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loc_record</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">io</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#new_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.new_data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">qcodes.data.data_set.</span></code><code class="sig-name descname"><span class="pre">new_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc_record</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">io</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#new_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.new_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new DataSet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -270,7 +268,7 @@ between saves to disk.</p></li>
 
 <dl class="py function">
 <dt id="qcodes.data.data_set.load_data">
-<code class="sig-prename descclassname">qcodes.data.data_set.</code><code class="sig-name descname">load_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">formatter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">io</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#load_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.load_data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">qcodes.data.data_set.</span></code><code class="sig-name descname"><span class="pre">load_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">formatter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">io</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#load_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.load_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load an existing DataSet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -297,7 +295,7 @@ where you started the python session.</p></li>
 
 <dl class="py class">
 <dt id="qcodes.data.data_set.DataSet">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes.data.data_set.</code><code class="sig-name descname">DataSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">arrays</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">formatter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">io</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">write_period</span><span class="o">=</span><span class="default_value">5</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes.data.data_set.</span></code><code class="sig-name descname"><span class="pre">DataSet</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">formatter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">io</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../utils/helpers.html#qcodes.utils.helpers.DelegateAttributes" title="qcodes.utils.helpers.DelegateAttributes"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.utils.helpers.DelegateAttributes</span></code></a></p>
 <p>A container for one complete measurement loop.</p>
 <p>May contain many individual arrays with potentially different
@@ -330,27 +328,30 @@ from calls to <code class="docutils literal notranslate"><span class="pre">self.
 </dl>
 <dl class="py attribute">
 <dt id="qcodes.data.data_set.DataSet.delegate_attr_dicts">
-<code class="sig-name descname">delegate_attr_dicts</code><em class="property">: List<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)">str</a><span class="p">]</span></em><em class="property"> = ['arrays']</em><a class="headerlink" href="#qcodes.data.data_set.DataSet.delegate_attr_dicts" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname"><span class="pre">delegate_attr_dicts</span></code><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">['arrays']</span></em><a class="headerlink" href="#qcodes.data.data_set.DataSet.delegate_attr_dicts" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of names (strings) of dictionaries
+which are (or will be) attributes of <code class="docutils literal notranslate"><span class="pre">self</span></code>, whose keys should
+be treated as attributes of <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes.data.data_set.DataSet.default_io">
-<code class="sig-name descname">default_io</code><em class="property"> = &lt;DiskIO, base_location='/home/runner/work/Qcodes/Qcodes/docs'&gt;</em><a class="headerlink" href="#qcodes.data.data_set.DataSet.default_io" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">default_io</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;DiskIO,</span> <span class="pre">base_location='/home/runner/work/Qcodes/Qcodes/docs'&gt;</span></em><a class="headerlink" href="#qcodes.data.data_set.DataSet.default_io" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes.data.data_set.DataSet.default_formatter">
-<code class="sig-name descname">default_formatter</code><em class="property"> = &lt;qcodes.data.gnuplot_format.GNUPlotFormat object&gt;</em><a class="headerlink" href="#qcodes.data.data_set.DataSet.default_formatter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">default_formatter</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;qcodes.data.gnuplot_format.GNUPlotFormat</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#qcodes.data.data_set.DataSet.default_formatter" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes.data.data_set.DataSet.location_provider">
-<code class="sig-name descname">location_provider</code><em class="property"> = &lt;qcodes.data.location.FormatLocation object&gt;</em><a class="headerlink" href="#qcodes.data.data_set.DataSet.location_provider" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">location_provider</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;qcodes.data.location.FormatLocation</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#qcodes.data.data_set.DataSet.location_provider" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes.data.data_set.DataSet.background_functions">
-<code class="sig-name descname">background_functions</code><em class="property">: Dict<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)">str</a><span class="p">, </span>Callable<span class="p">[</span><span class="p">[</span><span class="p">…</span><span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></em><em class="property"> = {}</em><a class="headerlink" href="#qcodes.data.data_set.DataSet.background_functions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">background_functions</span></code><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">…</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">{}</span></em><a class="headerlink" href="#qcodes.data.data_set.DataSet.background_functions" title="Permalink to this definition">¶</a></dt>
 <dd><p>The value <code class="docutils literal notranslate"><span class="pre">fn</span></code> is a callable accepting no
 arguments, and <code class="docutils literal notranslate"><span class="pre">key</span></code> is a name to identify the function and help
 you attach and remove it.</p>
@@ -363,7 +364,7 @@ DataSet you can override this with an instance attribute.</p>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.sync">
-<code class="sig-name descname">sync</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.sync"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.sync" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">sync</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.sync"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.sync" title="Permalink to this definition">¶</a></dt>
 <dd><p>Synchronize this DataSet with the DataServer or storage.</p>
 <p>If this DataSet is on the server, asks the server for changes.
 If not, reads the entire DataSet from disk.</p>
@@ -379,7 +380,7 @@ If not, reads the entire DataSet from disk.</p>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.fraction_complete">
-<code class="sig-name descname">fraction_complete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.fraction_complete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.fraction_complete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">fraction_complete</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.fraction_complete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.fraction_complete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the fraction of this DataSet which has data in it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -398,7 +399,7 @@ array sizes. If there are no measured arrays, returns zero.</p>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.complete">
-<code class="sig-name descname">complete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">delay</span><span class="o">=</span><span class="default_value">1.5</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.complete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.complete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">complete</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.complete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.complete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Periodically sync the DataSet and display percent complete status.</p>
 <p>Also, each period, execute functions stored in (class attribute)
 <code class="docutils literal notranslate"><span class="pre">self.background_functions</span></code>. If a function fails, we log its
@@ -413,7 +414,7 @@ a row, it gets removed.</p>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.get_changes">
-<code class="sig-name descname">get_changes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">synced_indices</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.get_changes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.get_changes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_changes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">synced_indices</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.get_changes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.get_changes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find changes since the last sync of this DataSet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -439,7 +440,7 @@ present in the return, only those with changes.</p>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.add_array">
-<code class="sig-name descname">add_array</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_array</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.add_array"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.add_array" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add_array</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_array</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.add_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.add_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add one DataArray to this DataSet, and mark it as part of this DataSet.</p>
 <p>Note: DO NOT just set <code class="docutils literal notranslate"><span class="pre">data_set.arrays[id]</span> <span class="pre">=</span> <span class="pre">data_array</span></code>, because
 this will not check if we are overwriting another array, nor set the
@@ -457,7 +458,7 @@ matches how you’re storing it here.</p>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.remove_array">
-<code class="sig-name descname">remove_array</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array_id</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.remove_array"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.remove_array" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">remove_array</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.remove_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.remove_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove an array from a dataset</p>
 <p>Throws an exception when the array specified is refereced by other
 arrays in the dataset.</p>
@@ -470,7 +471,7 @@ arrays in the dataset.</p>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.store">
-<code class="sig-name descname">store</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">loop_indices</span></em>, <em class="sig-param"><span class="n">ids_values</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.store"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.store" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">store</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loop_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids_values</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.store"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.store" title="Permalink to this definition">¶</a></dt>
 <dd><p>Insert data into one or more of our DataArrays.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -489,7 +490,7 @@ to insert into that array.</p></li>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.default_parameter_name">
-<code class="sig-name descname">default_parameter_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">paramname</span><span class="o">=</span><span class="default_value">'amplitude'</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.default_parameter_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.default_parameter_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">default_parameter_name</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paramname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'amplitude'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.default_parameter_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.default_parameter_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return name of default parameter for plotting</p>
 <p>The default parameter is determined by looking into
 metdata[‘default_parameter_name’].  If this variable is not present,
@@ -509,7 +510,7 @@ then the closest match to the argument paramname is tried.</p>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.default_parameter_array">
-<code class="sig-name descname">default_parameter_array</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">paramname</span><span class="o">=</span><span class="default_value">'amplitude'</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.default_parameter_array"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.default_parameter_array" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">default_parameter_array</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paramname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'amplitude'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.default_parameter_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.default_parameter_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return default parameter array</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -531,19 +532,19 @@ Defaults to ‘amplitude’</p>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.read">
-<code class="sig-name descname">read</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.read" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">read</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.read"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.read" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read the whole DataSet from storage, overwriting the local data.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.read_metadata">
-<code class="sig-name descname">read_metadata</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.read_metadata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.read_metadata" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">read_metadata</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.read_metadata"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.read_metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read the metadata from storage, overwriting the local data.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.write">
-<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">write_metadata</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">only_complete</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.write" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">write</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">write_metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_complete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.write"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.write" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes updates to the DataSet to storage.
 N.B. it is recommended to call data_set.finalize() when a DataSet is
 no longer expected to change to ensure files get closed</p>
@@ -563,7 +564,7 @@ The file gets saved in the usual location.</p></li>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.write_copy">
-<code class="sig-name descname">write_copy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">io_manager</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.write_copy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.write_copy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">write_copy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">io_manager</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.write_copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.write_copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write a new complete copy of this DataSet to storage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -582,7 +583,7 @@ either this <code class="docutils literal notranslate"><span class="pre">DataSet
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.add_metadata">
-<code class="sig-name descname">add_metadata</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">new_metadata</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.add_metadata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.add_metadata" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add_metadata</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_metadata</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.add_metadata"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.add_metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update DataSet.metadata with additional data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -594,13 +595,13 @@ the existing metadata</p>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.save_metadata">
-<code class="sig-name descname">save_metadata</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.save_metadata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.save_metadata" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">save_metadata</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.save_metadata"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.save_metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate and save the DataSet’s metadata.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.finalize">
-<code class="sig-name descname">finalize</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">write_metadata</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.finalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.finalize" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">finalize</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.finalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.finalize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mark the DataSet complete and write any remaining modifications.</p>
 <p>Also closes the data file(s), if the <code class="docutils literal notranslate"><span class="pre">Formatter</span></code> we’re using
 supports that.</p>
@@ -618,13 +619,13 @@ raw data inside a loop, a snapshot is not wanted.</p></li>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.snapshot">
-<code class="sig-name descname">snapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">update</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.snapshot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.snapshot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">snapshot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.snapshot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>JSON state of the DataSet.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.get_array_metadata">
-<code class="sig-name descname">get_array_metadata</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array_id</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.get_array_metadata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.get_array_metadata" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_array_metadata</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.get_array_metadata"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.get_array_metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the metadata for a single contained DataArray.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -641,19 +642,24 @@ raw data inside a loop, a snapshot is not wanted.</p></li>
 
 <dl class="py method">
 <dt id="qcodes.data.data_set.DataSet.__repr__">
-<code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.__repr__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.__repr__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">__repr__</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes/data/data_set.html#DataSet.__repr__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.data.data_set.DataSet.__repr__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rich information about the DataSet and contained arrays.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes.data.data_set.DataSet.delegate_attr_objects">
-<code class="sig-name descname">delegate_attr_objects</code><em class="property">: List<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)">str</a><span class="p">]</span></em><em class="property"> = []</em><a class="headerlink" href="#qcodes.data.data_set.DataSet.delegate_attr_objects" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname"><span class="pre">delegate_attr_objects</span></code><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#qcodes.data.data_set.DataSet.delegate_attr_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of names (strings) of objects
+which are (or will be) attributes of <code class="docutils literal notranslate"><span class="pre">self</span></code>, whose attributes
+should be passed through to <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes.data.data_set.DataSet.omit_delegate_attrs">
-<code class="sig-name descname">omit_delegate_attrs</code><em class="property">: List<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)">str</a><span class="p">]</span></em><em class="property"> = []</em><a class="headerlink" href="#qcodes.data.data_set.DataSet.omit_delegate_attrs" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname"><span class="pre">omit_delegate_attrs</span></code><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#qcodes.data.data_set.DataSet.omit_delegate_attrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of attribute names (strings)
+to <em>not</em> delegate to any other dictionary or object.</p>
+</dd></dl>
 
 </dd></dl>
 
