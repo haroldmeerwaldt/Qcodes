@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                0.23.0.dev1+116.g4e1e601919
+                0.23.0.dev1+122.ge84f6734e1
               </div>
             
           
@@ -96,7 +96,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#installing-the-latest-qcodes-release">Installing the latest QCoDeS release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-the-latest-qcodes-release-with-pip">Installing the latest QCoDeS release with pip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-the-latest-qcodes-release-with-conda">Installing the latest QCoDeS release with conda</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#installing-qcodes-from-github">Installing QCoDeS from GitHub</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#other-dependencies">Other dependencies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#updating-qcodes">Updating QCoDeS</a></li>
@@ -213,11 +214,11 @@
 <div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>You need a working python 3.x installation to be able to use QCoDeS. We highly
-recommend installing Anaconda, which takes care of installing Python and
-managing packages. In the following it will be assumed that you use Anaconda.
-Download and install it from <a class="reference external" href="https://www.anaconda.com/download">here</a>. Make
-sure to download the latest version with python 3.7.</p>
-<p>Once you download, install Anaconda according to the instructions on screen,
+recommend installing Miniconda, which takes care of installing Python and
+managing packages. In the following it will be assumed that you use Miniconda.
+Download and install it from <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">here</a>. Make
+sure to download the latest version with python 3.7 or newer.</p>
+<p>Once you download, install Miniconda according to the instructions on screen,
 choosing the single user installation option.</p>
 <p>The next section will guide you through the installation of QCoDeS
 on Windows, although most of the things also work for macOS and Linux.</p>
@@ -226,32 +227,47 @@ on Windows, although most of the things also work for macOS and Linux.</p>
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Before you install QCoDeS you have to decide whether you want to install the
 latest stable release or if you want to get the developer version from GitHub.</p>
-<div class="section" id="installing-the-latest-qcodes-release">
-<h3>Installing the latest QCoDeS release<a class="headerlink" href="#installing-the-latest-qcodes-release" title="Permalink to this headline">¶</a></h3>
-<p>First download the QCoDeS environment.yml file by right
-clicking on <a class="reference external" href="https://raw.githubusercontent.com/QCoDeS/Qcodes/master/environment.yml">this link</a>
-and select save link as and download the file to a location
-that you can find again.
-Next launch an Anaconda Prompt (start typing anaconda in the start menu and
+<p>Stable versions of QCoDeS are distributed via both PyPi and CondaForge to be installed
+with pip and conda respectively. Below we will cover both installation types.
+For new users we recommend installing QCoDeS from conda-forge.</p>
+<div class="section" id="installing-the-latest-qcodes-release-with-pip">
+<h3>Installing the latest QCoDeS release with pip<a class="headerlink" href="#installing-the-latest-qcodes-release-with-pip" title="Permalink to this headline">¶</a></h3>
+<p>Next launch an Anaconda Prompt (start typing anaconda in the start menu and
 click on <em>Anaconda Prompt</em>).</p>
 <p>Here type in the prompt:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f environment.yml
-activate qcodes
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n qcodes <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8
+conda activate qcodes
 pip install qcodes
 </pre></div>
 </div>
-<p>The first line creates a new anaconda environment that is called <em>qcodes</em>
-and will install all the required dependendencies. The second line activates
+<p>The first line creates a new conda environment that is called <em>qcodes</em>
+with python 3.8 (QCoDeS also supports 3.7 and 3.9). The second line activates
 this freshly created environment, so that the command in the third line will
 install qcodes for this environment.</p>
 </div>
+<div class="section" id="installing-the-latest-qcodes-release-with-conda">
+<h3>Installing the latest QCoDeS release with conda<a class="headerlink" href="#installing-the-latest-qcodes-release-with-conda" title="Permalink to this headline">¶</a></h3>
+<p>To install QCoDeS using Conda from conda-forge type the following into a prompt.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n qcodes
+conda activate qcodes
+conda config --add channels conda-forge --env
+conda config --set channel_priority strict --env
+conda install qcodes
+</pre></div>
+</div>
+<p>First we crate a new environment to install QCoDeS into and then we set that
+environment up to install packages from conda-forge since QCoDeS is not available in the
+default channel. As recommended by the conda-forge maintainers we set channel_priority to strict
+to prefer all packages to be installed from the conda-forge channel.
+Note that we use the <cite>–env</cite> flag to only set these settings for the QCoDeS env. We
+do this to not change the settings for any other environment that you may have created.
+Finally we install QCoDeS into this environment.</p>
+</div>
 <div class="section" id="installing-qcodes-from-github">
 <h3>Installing QCoDeS from GitHub<a class="headerlink" href="#installing-qcodes-from-github" title="Permalink to this headline">¶</a></h3>
-<p>Clone the QCoDeS repository from GitHub from <a class="reference external" href="https://github.com/QCoDeS/Qcodes">https://github.com/QCoDeS/Qcodes</a>
-Then create an environment, that contains all of the dependencies for QCoDeS,
-from the <em>environment.yml</em> file in the root of the repository and activate it:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f &lt;path-to-environment.yml&gt;
-activate qcodes
+<p>Clone the QCoDeS repository from GitHub from <a class="reference external" href="https://github.com/QCoDeS/Qcodes">https://github.com/QCoDeS/Qcodes</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create qcodesdev <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8
+conda activate qcodesdev
 </pre></div>
 </div>
 <p>Finally install QCoDeS add the repository via</p>
@@ -260,6 +276,11 @@ activate qcodes
 </div>
 <p>This will perform an <cite>editable install</cite> such that any changes of QCoDeS in your
 local git clone are automatically available without having to reinstall QCoDeS.</p>
+<p>Note that if you wish to run the QCoDeS test you will also need to install the testing
+dependencies. This can be done by installing QCoDeS using the <cite>test</cite> extra target.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -e &lt;path-to-repository&gt;<span class="o">[</span>test<span class="o">]</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="other-dependencies">
 <h3>Other dependencies<a class="headerlink" href="#other-dependencies" title="Permalink to this headline">¶</a></h3>
@@ -274,6 +295,10 @@ the download is free of charge.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install --upgrade qcodes
 </pre></div>
 </div>
+<p>If you have installed from conda-forge</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update qcodes
+</pre></div>
+</div>
 <p>in principle, there should be a new release out roughly every month.</p>
 <p>If you have installed with git, pull the QCoDeS repository using your
 favourite method (git bash, git shell, github desktop, …). There are
@@ -281,28 +306,36 @@ new commits to the repository daily.</p>
 </div>
 <div class="section" id="keeping-your-environment-up-to-date">
 <h3>Keeping your environment up to date<a class="headerlink" href="#keeping-your-environment-up-to-date" title="Permalink to this headline">¶</a></h3>
-<p>Additional dependencies are periodically added to the QCoDeS environment and
+<p>Additional dependencies are periodically added to the QCoDeS and
 new versions of packages that QCoDeS depends on are released.</p>
-<p>To keep the QCoDeS environment up to date you can run</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update -n base conda -c defaults
-conda env update
+<p>Installing a new version of QCoDeS will automatically upgrade any dependency if required.
+However you may wish to upgrade some of the dependency to a newer version than the minimum
+version required by QCoDeS</p>
+<p>If you have installed QCoDeS using pip you can upgrade each package individually.
+E.g. to upgrade numpy you would do.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install --upgrade numpy
 </pre></div>
 </div>
-<p>from the root of your QCoDeS git repository.</p>
-<p>Alternatively you can grab a new version of the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file as
-explained above and run the same commands from a directory containing that file.</p>
+<p>You can list all outdated packages using</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip list --outdated
+</pre></div>
+</div>
+<p>If you have installed QCoDeS using conda upgrading all packages can be done by:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update -n base conda -c defaults
+conda update --all
+</pre></div>
+</div>
 <p>The first line ensures that the <code class="docutils literal notranslate"><span class="pre">conda</span></code> package manager it self is
 up to date and the second line will ensure that the latest versions of the
-packages used by QCoDeS are installed. See
-<a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#updating-an-environment">here</a> for more
-documentation on <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">update</span></code>.</p>
+packages used by QCoDeS are installed.</p>
 <p>If you using QCoDeS from an editable install you should also reinstall QCoDeS using</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -e &lt;path-to-repository&gt;
 </pre></div>
 </div>
 <p>After upgrading the environment to make sure that dependencies are tracked correctly.</p>
 <p>Note that if you install packages yourself into the same
-environment it is preferable to install them using <code class="docutils literal notranslate"><span class="pre">conda</span></code>. There is a chance that
+environment it is preferable to install them using the same package manager that
+you install QCoDeS with. There is a chance that
 mixing packages from <code class="docutils literal notranslate"><span class="pre">conda</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code> will produce a broken environment.
 Especially if the same package is installed using both <code class="docutils literal notranslate"><span class="pre">pip</span></code> and <code class="docutils literal notranslate"><span class="pre">conda</span></code>.</p>
 </div>
@@ -310,20 +343,21 @@ Especially if the same package is installed using both <code class="docutils lit
 <div class="section" id="using-qcodes">
 <h2>Using QCoDes<a class="headerlink" href="#using-qcodes" title="Permalink to this headline">¶</a></h2>
 <p>For using QCoDeS, as with any other python library, it is useful to use an
-application that facilitates the editing and execution of python files. With
-Anaconda come two preinstalled options:</p>
+application that facilitates the editing and execution of python files. There
+are two widely  used options:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><strong>Jupyter</strong>, a browser based notebook</p></li>
 <li><p><strong>Spyder</strong>, an integrated development environment</p></li>
 </ul>
 </div></blockquote>
+<p>Both can be installed using conda or pip.</p>
 <p>To start either of them you can use the shortcuts in the start menu under
 <em>Anaconda3</em> with a trailing <em>(qcodes)</em>.</p>
 <p>For other options you can launch a terminal either via the <em>Anaconda Navigator</em>
 by selecting <em>qcodes</em> in the <em>Environments tab</em> and left-clicking on the <em>play</em>
 button or by entering</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>activate qcodes
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate qcodes
 </pre></div>
 </div>
 <p>in the <em>Anaconda prompt</em></p>
