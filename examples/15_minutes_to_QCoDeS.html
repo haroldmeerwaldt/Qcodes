@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                0.23.0.dev1+134.g01506d07b8
+                0.23.0.dev1+141.gc55a49f1bc
               </div>
             
           
@@ -567,7 +567,7 @@ Output logging : True
 Raw input log  : False
 Timestamping   : True
 State          : active
-Qcodes Logfile : /home/runner/.qcodes/logs/210219-3748-qcodes.log
+Qcodes Logfile : /home/runner/.qcodes/logs/210219-3731-qcodes.log
 </pre></div></div>
 </div>
 <p>or we can configure qcodes to automatically start logging on every import of qcodes, by running the following code once. (This will persist the current configuration in <code class="docutils literal notranslate"><span class="pre">~\qcodesrc.json</span></code>)</p>
@@ -801,41 +801,41 @@ v2  :   0 (V)
       &#39;model&#39;: &#39;dmm&#39;,
       &#39;serial&#39;: None,
       &#39;firmware&#39;: None},
-     &#39;ts&#39;: &#39;2021-02-19 06:25:49&#39;,
-     &#39;instrument&#39;: &#39;qcodes.tests.instrument_mocks.DummyInstrumentWithMeasurement&#39;,
-     &#39;instrument_name&#39;: &#39;dmm&#39;,
+     &#39;ts&#39;: &#39;2021-02-19 11:42:49&#39;,
+     &#39;unit&#39;: &#39;&#39;,
+     &#39;post_delay&#39;: 0,
+     &#39;label&#39;: &#39;IDN&#39;,
      &#39;inter_delay&#39;: 0,
      &#39;vals&#39;: &#39;&lt;Anything&gt;&#39;,
-     &#39;post_delay&#39;: 0,
-     &#39;unit&#39;: &#39;&#39;,
-     &#39;label&#39;: &#39;IDN&#39;,
-     &#39;name&#39;: &#39;IDN&#39;},
+     &#39;name&#39;: &#39;IDN&#39;,
+     &#39;instrument&#39;: &#39;qcodes.tests.instrument_mocks.DummyInstrumentWithMeasurement&#39;,
+     &#39;instrument_name&#39;: &#39;dmm&#39;},
     &#39;v1&#39;: {&#39;__class__&#39;: &#39;qcodes.tests.instrument_mocks.DmmExponentialParameter&#39;,
      &#39;full_name&#39;: &#39;dmm_v1&#39;,
-     &#39;value&#39;: 5.193331896067691,
-     &#39;raw_value&#39;: 5.193331896067691,
-     &#39;ts&#39;: &#39;2021-02-19 06:25:49&#39;,
-     &#39;instrument&#39;: &#39;qcodes.tests.instrument_mocks.DummyInstrumentWithMeasurement&#39;,
-     &#39;instrument_name&#39;: &#39;dmm&#39;,
+     &#39;value&#39;: 4.921487444309971,
+     &#39;raw_value&#39;: 4.921487444309971,
+     &#39;ts&#39;: &#39;2021-02-19 11:42:49&#39;,
+     &#39;unit&#39;: &#39;V&#39;,
+     &#39;post_delay&#39;: 0,
+     &#39;label&#39;: &#39;Gate v1&#39;,
      &#39;inter_delay&#39;: 0,
      &#39;vals&#39;: &#39;&lt;Numbers -800&lt;=v&lt;=400&gt;&#39;,
-     &#39;post_delay&#39;: 0,
-     &#39;unit&#39;: &#39;V&#39;,
-     &#39;label&#39;: &#39;Gate v1&#39;,
-     &#39;name&#39;: &#39;v1&#39;},
+     &#39;name&#39;: &#39;v1&#39;,
+     &#39;instrument&#39;: &#39;qcodes.tests.instrument_mocks.DummyInstrumentWithMeasurement&#39;,
+     &#39;instrument_name&#39;: &#39;dmm&#39;},
     &#39;v2&#39;: {&#39;__class__&#39;: &#39;qcodes.tests.instrument_mocks.DmmGaussParameter&#39;,
      &#39;full_name&#39;: &#39;dmm_v2&#39;,
-     &#39;value&#39;: 0.7591791187906362,
-     &#39;raw_value&#39;: 0.7591791187906362,
-     &#39;ts&#39;: &#39;2021-02-19 06:25:49&#39;,
-     &#39;instrument&#39;: &#39;qcodes.tests.instrument_mocks.DummyInstrumentWithMeasurement&#39;,
-     &#39;instrument_name&#39;: &#39;dmm&#39;,
+     &#39;value&#39;: 0.7591754493562732,
+     &#39;raw_value&#39;: 0.7591754493562732,
+     &#39;ts&#39;: &#39;2021-02-19 11:42:49&#39;,
+     &#39;unit&#39;: &#39;V&#39;,
+     &#39;post_delay&#39;: 0,
+     &#39;label&#39;: &#39;Gate v2&#39;,
      &#39;inter_delay&#39;: 0,
      &#39;vals&#39;: &#39;&lt;Numbers -800&lt;=v&lt;=400&gt;&#39;,
-     &#39;post_delay&#39;: 0,
-     &#39;unit&#39;: &#39;V&#39;,
-     &#39;label&#39;: &#39;Gate v2&#39;,
-     &#39;name&#39;: &#39;v2&#39;}},
+     &#39;name&#39;: &#39;v2&#39;,
+     &#39;instrument&#39;: &#39;qcodes.tests.instrument_mocks.DummyInstrumentWithMeasurement&#39;,
+     &#39;instrument_name&#39;: &#39;dmm&#39;}},
    &#39;name&#39;: &#39;dmm&#39;},
   &#39;dac&#39;: {&#39;functions&#39;: {},
    &#39;submodules&#39;: {},
@@ -850,41 +850,41 @@ v2  :   0 (V)
       &#39;model&#39;: &#39;dac&#39;,
       &#39;serial&#39;: None,
       &#39;firmware&#39;: None},
-     &#39;ts&#39;: &#39;2021-02-19 06:25:49&#39;,
-     &#39;instrument&#39;: &#39;qcodes.tests.instrument_mocks.DummyInstrument&#39;,
-     &#39;instrument_name&#39;: &#39;dac&#39;,
+     &#39;ts&#39;: &#39;2021-02-19 11:42:49&#39;,
+     &#39;unit&#39;: &#39;&#39;,
+     &#39;post_delay&#39;: 0,
+     &#39;label&#39;: &#39;IDN&#39;,
      &#39;inter_delay&#39;: 0,
      &#39;vals&#39;: &#39;&lt;Anything&gt;&#39;,
-     &#39;post_delay&#39;: 0,
-     &#39;unit&#39;: &#39;&#39;,
-     &#39;label&#39;: &#39;IDN&#39;,
-     &#39;name&#39;: &#39;IDN&#39;},
+     &#39;name&#39;: &#39;IDN&#39;,
+     &#39;instrument&#39;: &#39;qcodes.tests.instrument_mocks.DummyInstrument&#39;,
+     &#39;instrument_name&#39;: &#39;dac&#39;},
     &#39;ch1&#39;: {&#39;__class__&#39;: &#39;qcodes.instrument.parameter.Parameter&#39;,
      &#39;full_name&#39;: &#39;dac_ch1&#39;,
      &#39;value&#39;: 0,
      &#39;raw_value&#39;: 0,
-     &#39;ts&#39;: &#39;2021-02-19 06:25:49&#39;,
-     &#39;instrument&#39;: &#39;qcodes.tests.instrument_mocks.DummyInstrument&#39;,
-     &#39;instrument_name&#39;: &#39;dac&#39;,
+     &#39;ts&#39;: &#39;2021-02-19 11:42:49&#39;,
+     &#39;unit&#39;: &#39;V&#39;,
+     &#39;post_delay&#39;: 0,
+     &#39;label&#39;: &#39;Gate ch1&#39;,
      &#39;inter_delay&#39;: 0,
      &#39;vals&#39;: &#39;&lt;Numbers -800&lt;=v&lt;=400&gt;&#39;,
-     &#39;post_delay&#39;: 0,
-     &#39;unit&#39;: &#39;V&#39;,
-     &#39;label&#39;: &#39;Gate ch1&#39;,
-     &#39;name&#39;: &#39;ch1&#39;},
+     &#39;name&#39;: &#39;ch1&#39;,
+     &#39;instrument&#39;: &#39;qcodes.tests.instrument_mocks.DummyInstrument&#39;,
+     &#39;instrument_name&#39;: &#39;dac&#39;},
     &#39;ch2&#39;: {&#39;__class__&#39;: &#39;qcodes.instrument.parameter.Parameter&#39;,
      &#39;full_name&#39;: &#39;dac_ch2&#39;,
      &#39;value&#39;: 0,
      &#39;raw_value&#39;: 0,
-     &#39;ts&#39;: &#39;2021-02-19 06:25:49&#39;,
-     &#39;instrument&#39;: &#39;qcodes.tests.instrument_mocks.DummyInstrument&#39;,
-     &#39;instrument_name&#39;: &#39;dac&#39;,
+     &#39;ts&#39;: &#39;2021-02-19 11:42:49&#39;,
+     &#39;unit&#39;: &#39;V&#39;,
+     &#39;post_delay&#39;: 0,
+     &#39;label&#39;: &#39;Gate ch2&#39;,
      &#39;inter_delay&#39;: 0,
      &#39;vals&#39;: &#39;&lt;Numbers -800&lt;=v&lt;=400&gt;&#39;,
-     &#39;post_delay&#39;: 0,
-     &#39;unit&#39;: &#39;V&#39;,
-     &#39;label&#39;: &#39;Gate ch2&#39;,
-     &#39;name&#39;: &#39;ch2&#39;}},
+     &#39;name&#39;: &#39;ch2&#39;,
+     &#39;instrument&#39;: &#39;qcodes.tests.instrument_mocks.DummyInstrument&#39;,
+     &#39;instrument_name&#39;: &#39;dac&#39;}},
    &#39;name&#39;: &#39;dac&#39;}},
  &#39;parameters&#39;: {},
  &#39;components&#39;: {},
@@ -940,7 +940,7 @@ more complex design cases.</p>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-4.052431513994483
+3.9691022585870335
 </pre></div></div>
 </div>
 <p>Further information can be found in the <a class="reference external" href="http://qcodes.github.io/Qcodes/user/intro.html#parameter">user guide</a> or <a class="reference external" href="http://qcodes.github.io/Qcodes/api/parameters/index.html">api documentation</a> of parameter.</p>
@@ -964,14 +964,14 @@ more complex design cases.</p>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Upgrading database; v0 -&gt; v1: : 0it [00:00, ?it/s]
-Upgrading database; v1 -&gt; v2: 100%|██████████| 1/1 [00:00&lt;00:00, 774.14it/s]
+Upgrading database; v1 -&gt; v2: 100%|██████████| 1/1 [00:00&lt;00:00, 272.66it/s]
 Upgrading database; v2 -&gt; v3: : 0it [00:00, ?it/s]
 Upgrading database; v3 -&gt; v4: : 0it [00:00, ?it/s]
-Upgrading database; v4 -&gt; v5: 100%|██████████| 1/1 [00:00&lt;00:00, 346.32it/s]
+Upgrading database; v4 -&gt; v5: 100%|██████████| 1/1 [00:00&lt;00:00, 296.44it/s]
 Upgrading database; v5 -&gt; v6: : 0it [00:00, ?it/s]
-Upgrading database; v6 -&gt; v7: 100%|██████████| 1/1 [00:00&lt;00:00,  7.70it/s]
-Upgrading database; v7 -&gt; v8: 100%|██████████| 1/1 [00:00&lt;00:00, 387.43it/s]
-Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00&lt;00:00, 771.72it/s]
+Upgrading database; v6 -&gt; v7: 100%|██████████| 1/1 [00:00&lt;00:00, 33.74it/s]
+Upgrading database; v7 -&gt; v8: 100%|██████████| 1/1 [00:00&lt;00:00, 478.86it/s]
+Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00&lt;00:00, 350.11it/s]
 </pre></div></div>
 </div>
 <p>Alternatively, if you already have a QCoDeS database which you would like to use for your measurement, say at <code class="docutils literal notranslate"><span class="pre">~/myData.db</span></code>, it is sufficient to use</p>
@@ -990,14 +990,14 @@ Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Upgrading database; v0 -&gt; v1: : 0it [00:00, ?it/s]
-Upgrading database; v1 -&gt; v2: 100%|██████████| 1/1 [00:00&lt;00:00, 659.17it/s]
+Upgrading database; v1 -&gt; v2: 100%|██████████| 1/1 [00:00&lt;00:00, 434.24it/s]
 Upgrading database; v2 -&gt; v3: : 0it [00:00, ?it/s]
 Upgrading database; v3 -&gt; v4: : 0it [00:00, ?it/s]
-Upgrading database; v4 -&gt; v5: 100%|██████████| 1/1 [00:00&lt;00:00, 529.52it/s]
+Upgrading database; v4 -&gt; v5: 100%|██████████| 1/1 [00:00&lt;00:00, 415.61it/s]
 Upgrading database; v5 -&gt; v6: : 0it [00:00, ?it/s]
-Upgrading database; v6 -&gt; v7: 100%|██████████| 1/1 [00:00&lt;00:00,  9.15it/s]
-Upgrading database; v7 -&gt; v8: 100%|██████████| 1/1 [00:00&lt;00:00, 416.18it/s]
-Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00&lt;00:00, 235.65it/s]
+Upgrading database; v6 -&gt; v7: 100%|██████████| 1/1 [00:00&lt;00:00, 36.87it/s]
+Upgrading database; v7 -&gt; v8: 100%|██████████| 1/1 [00:00&lt;00:00, 597.31it/s]
+Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00&lt;00:00, 735.20it/s]
 </pre></div></div>
 </div>
 <p>Note that it is user’s responsibility to provide the correct absolute path for the existing database. The notation of the path may differ with respect to the operating system. The method <code class="docutils literal notranslate"><span class="pre">initialise_or_create_database_at</span></code> makes sure that your QCoDeS session is connected to the referred database. If the database file does not exist, it will be initiated at the provided path.</p>
@@ -1056,14 +1056,14 @@ Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Upgrading database; v0 -&gt; v1: : 0it [00:00, ?it/s]
-Upgrading database; v1 -&gt; v2: 100%|██████████| 1/1 [00:00&lt;00:00, 670.45it/s]
+Upgrading database; v1 -&gt; v2: 100%|██████████| 1/1 [00:00&lt;00:00, 700.33it/s]
 Upgrading database; v2 -&gt; v3: : 0it [00:00, ?it/s]
 Upgrading database; v3 -&gt; v4: : 0it [00:00, ?it/s]
-Upgrading database; v4 -&gt; v5: 100%|██████████| 1/1 [00:00&lt;00:00, 342.64it/s]
+Upgrading database; v4 -&gt; v5: 100%|██████████| 1/1 [00:00&lt;00:00, 795.13it/s]
 Upgrading database; v5 -&gt; v6: : 0it [00:00, ?it/s]
-Upgrading database; v6 -&gt; v7: 100%|██████████| 1/1 [00:00&lt;00:00, 36.32it/s]
-Upgrading database; v7 -&gt; v8: 100%|██████████| 1/1 [00:00&lt;00:00, 729.95it/s]
-Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00&lt;00:00, 1128.71it/s]
+Upgrading database; v6 -&gt; v7: 100%|██████████| 1/1 [00:00&lt;00:00, 28.96it/s]
+Upgrading database; v7 -&gt; v8: 100%|██████████| 1/1 [00:00&lt;00:00, 401.83it/s]
+Upgrading database; v8 -&gt; v9: 100%|██████████| 1/1 [00:00&lt;00:00, 374.73it/s]
 </pre></div></div>
 </div>
 <p>The methods shown above to load or create the experiment is the most versatile one. However for specific cases the following alternative methods can be used to create or load experiments:</p>
@@ -1259,9 +1259,8 @@ Starting experimental run with id: 1.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;dmm_v1&#39;: {&#39;dmm_v1&#39;: array([ 5.04709670e+00,  2.88721805e+00,  1.82038785e+00,  8.46572752e-01,
-          5.30510199e-01,  2.07074600e-01, -1.93808856e-03, -4.18263216e-03,
-          3.43307302e-02,  9.81376997e-02]),
+{&#39;dmm_v1&#39;: {&#39;dmm_v1&#39;: array([5.07551915, 2.96586673, 1.61374331, 0.8905818 , 0.36951304,
+         0.13370176, 0.15159246, 0.10279428, 0.01645423, 0.01521048]),
   &#39;dac_ch1&#39;: array([ 0.        ,  2.77777778,  5.55555556,  8.33333333, 11.11111111,
          13.88888889, 16.66666667, 19.44444444, 22.22222222, 25.        ])}}
 </pre></div></div>
@@ -1314,23 +1313,23 @@ Starting experimental run with id: 1.
   <tbody>
     <tr>
       <th>0.000000</th>
-      <td>5.047097</td>
+      <td>5.075519</td>
     </tr>
     <tr>
       <th>2.777778</th>
-      <td>2.887218</td>
+      <td>2.965867</td>
     </tr>
     <tr>
       <th>5.555556</th>
-      <td>1.820388</td>
+      <td>1.613743</td>
     </tr>
     <tr>
       <th>8.333333</th>
-      <td>0.846573</td>
+      <td>0.890582</td>
     </tr>
     <tr>
       <th>11.111111</th>
-      <td>0.530510</td>
+      <td>0.369513</td>
     </tr>
   </tbody>
 </table>
@@ -1707,7 +1706,7 @@ dl.xr-attrs {
   fill: currentColor;
 }
 </style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;dmm_v1&#x27; (dac_ch1: 5)&gt;
-array([5.0470967 , 2.88721805, 1.82038785, 0.84657275, 0.5305102 ])
+array([5.07551915, 2.96586673, 1.61374331, 0.8905818 , 0.36951304])
 Coordinates:
   * dac_ch1  (dac_ch1) float64 0.0 2.778 5.556 8.333 11.11
 Attributes:
@@ -1716,7 +1715,7 @@ Attributes:
     label:          Gate v1
     unit:           V
     inferred_from:  []
-    depends_on:     [&#x27;dac_ch1&#x27;]</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'dmm_v1'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>dac_ch1</span>: 5</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-8ed74d1a-4626-4f82-b346-36f8ceff700a' class='xr-array-in' type='checkbox' checked><label for='section-8ed74d1a-4626-4f82-b346-36f8ceff700a' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>5.047 2.887 1.82 0.8466 0.5305</span></div><div class='xr-array-data'><pre>array([5.0470967 , 2.88721805, 1.82038785, 0.84657275, 0.5305102 ])</pre></div></div></li><li class='xr-section-item'><input id='section-e5367e18-9213-43f2-86ec-51436f284a05' class='xr-section-summary-in' type='checkbox'  checked><label for='section-e5367e18-9213-43f2-86ec-51436f284a05' class='xr-section-summary' >Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>dac_ch1</span></div><div class='xr-var-dims'>(dac_ch1)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 2.778 5.556 8.333 11.11</div><input id='attrs-7dc7cee9-86e8-4b75-93ea-ca2d570dd411' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-7dc7cee9-86e8-4b75-93ea-ca2d570dd411' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-58dce444-0241-4175-9e3a-1ec51ac0b9ba' class='xr-var-data-in' type='checkbox'><label for='data-58dce444-0241-4175-9e3a-1ec51ac0b9ba' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([ 0.      ,  2.777778,  5.555556,  8.333333, 11.111111])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-a1b3a451-e152-4f62-90d2-b55f8fcc14f7' class='xr-section-summary-in' type='checkbox'  checked><label for='section-a1b3a451-e152-4f62-90d2-b55f8fcc14f7' class='xr-section-summary' >Attributes: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>dmm_v1</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>Gate v1</dd><dt><span>unit :</span></dt><dd>V</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[&#x27;dac_ch1&#x27;]</dd></dl></div></li></ul></div></div></div>
+    depends_on:     [&#x27;dac_ch1&#x27;]</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'dmm_v1'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>dac_ch1</span>: 5</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-3c78a844-0d7a-4065-a617-09f6a83e3daf' class='xr-array-in' type='checkbox' checked><label for='section-3c78a844-0d7a-4065-a617-09f6a83e3daf' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>5.076 2.966 1.614 0.8906 0.3695</span></div><div class='xr-array-data'><pre>array([5.07551915, 2.96586673, 1.61374331, 0.8905818 , 0.36951304])</pre></div></div></li><li class='xr-section-item'><input id='section-56a5fe8b-6c5e-4e87-83bf-e13ee8caca0e' class='xr-section-summary-in' type='checkbox'  checked><label for='section-56a5fe8b-6c5e-4e87-83bf-e13ee8caca0e' class='xr-section-summary' >Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>dac_ch1</span></div><div class='xr-var-dims'>(dac_ch1)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.0 2.778 5.556 8.333 11.11</div><input id='attrs-08ebf40a-7b09-4a78-9e32-560af9c6e75b' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-08ebf40a-7b09-4a78-9e32-560af9c6e75b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-56365f67-0416-494c-b950-40c3493e1eb5' class='xr-var-data-in' type='checkbox'><label for='data-56365f67-0416-494c-b950-40c3493e1eb5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([ 0.      ,  2.777778,  5.555556,  8.333333, 11.111111])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-90bdc3fd-ef6f-4e7b-bca9-cbcaa20243b2' class='xr-section-summary-in' type='checkbox'  checked><label for='section-90bdc3fd-ef6f-4e7b-bca9-cbcaa20243b2' class='xr-section-summary' >Attributes: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>name :</span></dt><dd>dmm_v1</dd><dt><span>paramtype :</span></dt><dd>numeric</dd><dt><span>label :</span></dt><dd>Gate v1</dd><dt><span>unit :</span></dt><dd>V</dd><dt><span>inferred_from :</span></dt><dd>[]</dd><dt><span>depends_on :</span></dt><dd>[&#x27;dac_ch1&#x27;]</dd></dl></div></li></ul></div></div></div>
 </div>
 <p>We refer to <a class="reference internal" href="DataSet/Working-With-Pandas-and-XArray.html"><span class="doc">example notebook on working with pandas</span></a> and <a class="reference internal" href="DataSet/Accessing-data-in-DataSet.html"><span class="doc">Accessing data in DataSet notebook</span></a> for further information.</p>
 </div>
