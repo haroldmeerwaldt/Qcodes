@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                0.23.0.dev1+174.gfcefc8f630
+                0.23.0.dev1+194.g50172d9f49
               </div>
             
           
@@ -1128,14 +1128,78 @@ depending on the datatype.</p>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes.dataset.data_set_cache.DataSetCache.to_pandas">
-<code class="sig-name descname"><span class="pre">to_pandas</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">pd.DataFrame</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="reference internal" href="../../_modules/qcodes/dataset/data_set_cache.html#DataSetCache.to_pandas"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.dataset.data_set_cache.DataSetCache.to_pandas" title="Permalink to this definition">¶</a></dt>
+<dt id="qcodes.dataset.data_set_cache.DataSetCache.to_pandas_dataframe_dict">
+<code class="sig-name descname"><span class="pre">to_pandas_dataframe_dict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">pd.DataFrame</span><span class="p"><span class="pre">]</span></span><a class="reference internal" href="../../_modules/qcodes/dataset/data_set_cache.html#DataSetCache.to_pandas_dataframe_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.dataset.data_set_cache.DataSetCache.to_pandas_dataframe_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert the cached dataset to Pandas dataframes. The returned dataframes
 are in the same format <code class="xref py py-class docutils literal notranslate"><span class="pre">DataSet.to_pandas_dataframe_dict</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A dict from parameter name to Pandas Dataframes. Each dataframe
 represents one parameter tree.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qcodes.dataset.data_set_cache.DataSetCache.to_pandas_dataframe">
+<code class="sig-name descname"><span class="pre">to_pandas_dataframe</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">pd.DataFrame</span><a class="reference internal" href="../../_modules/qcodes/dataset/data_set_cache.html#DataSetCache.to_pandas_dataframe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.dataset.data_set_cache.DataSetCache.to_pandas_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the cached dataset to Pandas dataframes. The returned dataframes
+are in the same format <code class="xref py py-class docutils literal notranslate"><span class="pre">DataSet.to_pandas_dataframe_dict</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A dict from parameter name to Pandas Dataframes. Each dataframe
+represents one parameter tree.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qcodes.dataset.data_set_cache.DataSetCache.to_pandas">
+<code class="sig-name descname"><span class="pre">to_pandas</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">pd.DataFrame</span><span class="p"><span class="pre">]</span></span><a class="reference internal" href="../../_modules/qcodes/dataset/data_set_cache.html#DataSetCache.to_pandas"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.dataset.data_set_cache.DataSetCache.to_pandas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the values stored in the <a class="reference internal" href="#qcodes.dataset.data_set.DataSet" title="qcodes.dataset.data_set.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">dataset.data_set.DataSet</span></code></a> as a
+concatenated <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> s</p>
+<p>The DataFrame contains a column for the data and is indexed by a
+<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.MultiIndex.html#pandas.MultiIndex" title="(in pandas v1.2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.MultiIndex</span></code></a> formed from all the setpoints
+of the parameter.</p>
+<p>Note that if the dataset contains data for multiple parameters that do
+not share the same setpoints it is recommended to use
+<code class="xref py py-class docutils literal notranslate"><span class="pre">to_pandas_dataframe_dict</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> s with the requested parameter as
+a column and a indexed by a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.MultiIndex.html#pandas.MultiIndex" title="(in pandas v1.2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.MultiIndex</span></code></a> formed
+by the dependencies.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qcodes.dataset.data_set_cache.DataSetCache.to_xarray_dataarray_dict">
+<code class="sig-name descname"><span class="pre">to_xarray_dataarray_dict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">xr.DataArray</span><span class="p"><span class="pre">]</span></span><a class="reference internal" href="../../_modules/qcodes/dataset/data_set_cache.html#DataSetCache.to_xarray_dataarray_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.dataset.data_set_cache.DataSetCache.to_xarray_dataarray_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the values stored in the <a class="reference internal" href="#qcodes.dataset.data_set.DataSet" title="qcodes.dataset.data_set.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">dataset.data_set.DataSet</span></code></a> as a dict of
+<code class="xref py py-class docutils literal notranslate"><span class="pre">xr.DataArray</span></code> s
+Each element in the dict is indexed by the names of the dependent parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Dictionary from requested parameter names to <code class="xref py py-class docutils literal notranslate"><span class="pre">xr.DataArray</span></code> s
+with the requested parameter(s) as a column(s) and coordinates
+formed by the dependencies.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qcodes.dataset.data_set_cache.DataSetCache.to_xarray_dataset">
+<code class="sig-name descname"><span class="pre">to_xarray_dataset</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">xr.Dataset</span><a class="reference internal" href="../../_modules/qcodes/dataset/data_set_cache.html#DataSetCache.to_xarray_dataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes.dataset.data_set_cache.DataSetCache.to_xarray_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the values stored in the <a class="reference internal" href="#qcodes.dataset.data_set.DataSet" title="qcodes.dataset.data_set.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">dataset.data_set.DataSet</span></code></a> as a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">xr.Dataset</span></code> object.</p>
+<p>Note that if the dataset contains data for multiple parameters that do
+not share the same setpoints it is recommended to use
+<code class="xref py py-class docutils literal notranslate"><span class="pre">to_xarray_dataarray_dict</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">xr.Dataset</span></code> with the requested parameter(s) data as
+<code class="xref py py-class docutils literal notranslate"><span class="pre">xr.DataArray</span></code> s and coordinates formed by the dependencies.</p>
 </dd>
 </dl>
 </dd></dl>
