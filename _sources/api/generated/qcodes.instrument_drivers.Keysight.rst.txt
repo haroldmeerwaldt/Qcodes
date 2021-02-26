@@ -93,6 +93,38 @@ qcodes.instrument\_drivers.Keysight.Keysight\_N6705B module
    :undoc-members:
    :show-inheritance:
 
+qcodes.instrument\_drivers.Keysight.KtM960x module
+--------------------------------------------------
+
+.. automodule:: qcodes.instrument_drivers.Keysight.KtM960x
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+qcodes.instrument\_drivers.Keysight.KtM960xDefs module
+------------------------------------------------------
+
+.. automodule:: qcodes.instrument_drivers.Keysight.KtM960xDefs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+qcodes.instrument\_drivers.Keysight.KtMAwg module
+-------------------------------------------------
+
+.. automodule:: qcodes.instrument_drivers.Keysight.KtMAwg
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+qcodes.instrument\_drivers.Keysight.KtMAwgDefs module
+-----------------------------------------------------
+
+.. automodule:: qcodes.instrument_drivers.Keysight.KtMAwgDefs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 qcodes.instrument\_drivers.Keysight.N51x1 module
 ------------------------------------------------
 
