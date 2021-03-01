@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                0.23.0+4.g0149f126c5
+                0.23.0+8.g58c4e9045d
               </div>
             
           
@@ -529,7 +529,7 @@ Output logging : True
 Raw input log  : False
 Timestamping   : True
 State          : active
-Qcodes Logfile : /home/runner/.qcodes/logs/210301-7617-qcodes.log
+Qcodes Logfile : /home/runner/.qcodes/logs/210301-7650-qcodes.log
 </pre></div></div>
 </div>
 <div class="section" id="Base-Classes">
@@ -573,11 +573,11 @@ at all possible.</p></li>
 <div class="section" id="Logging">
 <h2>Logging<a class="headerlink" href="#Logging" title="Permalink to this headline">¶</a></h2>
 <p>Every QCoDeS module should have its own logger that is named with the name of the module. So to create a logger put a line at the top of the module like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>log = logging.getLogger(__name__)
 </pre></div>
 </div>
 <p>Use this logger only to log messages that are not originating from an <code class="docutils literal notranslate"><span class="pre">Instrument</span></code> instance. For messages from within an instrument instance use the <code class="docutils literal notranslate"><span class="pre">log</span></code> member of the <code class="docutils literal notranslate"><span class="pre">Instrument</span></code> class, e.g</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Could not connect at </span><span class="si">{</span><span class="n">address</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>self.log.info(f&quot;Could not connect at {address}&quot;)
 </pre></div>
 </div>
 <p>This way the instrument name will be prepended to the log message and the log messages can be filtered according to the instrument they originate from. See the example notebook of the logger module for more info (<a class="reference internal" href="../logging/logging_example.html"><span class="doc">offline</span></a>,<a class="reference external" href="https://nbviewer.jupyter.org/github/QCoDeS/Qcodes/tree/master/docs/examples/logging/logging_example.ipynb">online</a>).</p>
@@ -937,11 +937,11 @@ at all possible.</p></li>
 <div class="section" id="Custom-Parameter-classes">
 <h2>Custom Parameter classes<a class="headerlink" href="#Custom-Parameter-classes" title="Permalink to this headline">¶</a></h2>
 <p>When you call:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>self.add_parameter(name, **kwargs)
 </pre></div>
 </div>
 <p>you create a <code class="docutils literal notranslate"><span class="pre">Parameter</span></code>. But with the <code class="docutils literal notranslate"><span class="pre">parameter_class</span></code> kwarg you can invoke any class you want:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">parameter_class</span><span class="o">=</span><span class="n">OtherClass</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>self.add_parameter(name, parameter_class=OtherClass, **kwargs)
 </pre></div>
 </div>
 <ul class="simple">
@@ -968,11 +968,11 @@ a value of such a parameter, the user will not get <code class="docutils literal
 <h2>Dynamically adding and removing parameters<a class="headerlink" href="#Dynamically-adding-and-removing-parameters" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes when conditions change (for example, the mode of operation of the instrument is changed from current to voltage measurement) you want different parameters to be available.</p>
 <p>To delete existing parameters:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="n">name_to_delete</span><span class="p">]</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>del self.parameters[name_to_delete]
 </pre></div>
 </div>
 <p>And to add more, do the same thing as you did initially:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="n">new_name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>self.add_parameter(new_name, **kwargs)
 </pre></div>
 </div>
 </div>
