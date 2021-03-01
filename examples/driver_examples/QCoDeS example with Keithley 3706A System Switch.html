@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                0.23.0+8.g58c4e9045d
+                0.23.0+6.g8067e9ba80
               </div>
             
           
@@ -2571,7 +2571,7 @@ C:\Users\a-alhard\anaconda3\envs\qcodes\lib\site-packages\ipykernel_launcher.py:
 <h2>Exceptions<a class="headerlink" href="#Exceptions" title="Permalink to this headline">¶</a></h2>
 <p>The instrument itself does not return any error messages if it encounters an exception, but, rather silently handles such situations. Thus, QCoDeS driver is equipped with validation and exception handling with informative error messages for probable scenerios.</p>
 <p>Here, we note some important cases where errors are generated if:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-  A non existing channel or slot passed as an argument to a function
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>-  A non existing channel or slot passed as an argument to a function
 -  Slots are passed as arguments of `close_channel()`, `exclusive_close()` and `exclusive_slot_close()`
 -  A delay time is tried to be set for analog backplane relays
 -  A channel name is used to set as a backplane instead of a backplane name in `set_backplane()` and vice versa
